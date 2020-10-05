@@ -1,0 +1,219 @@
+{
+    "id": 5397,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Zada\u0107a 3, zadatak 4",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int matrica[100][100] = { {1,2,3,4}, {4,5,6,7}, {8,9,0,1} };\nprintf(\"%d \", max(matrica,3,4));\nmatrica[2][3] = 5;\nprintf(\"%d \", max(matrica,3,4));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 4 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int matrica[100][100] = { {1,2,3,4}, {4,5,6,7}, {8,9,0,1} };\nint kolona = izbaci_kolone(matrica, 3, 4, 1);\nprintf(\"%d\\n\", kolona);\nprintf(\"%d %d %d %d\", matrica[0][0], matrica[0][1], matrica[1][0], matrica[1][1]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2\\n2 3 5 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 2\n3 3 4 1\n2 3 2 1"
+            },
+            "expected": [
+                "Unesite sirinu i visinu matrice: Unesite elemente 1. reda: Unesite elemente 2. reda: \\nNakon 1. prolaza matrica glasi:\\n    4    1\\n    2    1\\n\\nNakon 2. prolaza matrica glasi:\\n    4\\n    2\\n\\nNakon 3. prolaza matrica je prazna!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int matrica[100][100] = { {1,1,1,1}, {1,2,2,2}, {1,2,2,2}, {1,2,2,2} };\nprintf(\"%d \", max(matrica,4,4));\nint mat2[100][100] = { {-1000, -2000}, {-2000, -1000} };\nprintf(\"%d \", max(mat2,2,2));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 -2000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int matrica[100][100] = { {1,0,0}, {1,0,0}, {1,0,0} };\nprintf(\"%d \", max(matrica,3,3));\nint mat2[100][100] = { {1, 0}, {0, 1} };\nprintf(\"%d \", max(mat2,2,2));\nint mat3[100][100] = { {-1, 0}, {0, -1} };\nprintf(\"%d \", max(mat3,2,2));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 -1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int matrica[100][100] = { {1,2,3,4}, {4,5,6,7}, {8,4,0,1}, {2,3,4,5} };\nint kolona = izbaci_kolone(matrica, 4, 4, 10);\nprintf(\"%d \", kolona);\nkolona = izbaci_kolone(matrica, 4, 4, 4);\nprintf(\"%d \", kolona);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 4\n1 3 4 2\n5 6 7 8\n9 10 11 12\n13 14 15 16"
+            },
+            "expected": [
+                "Unesite sirinu i visinu matrice: Unesite elemente 1. reda: Unesite elemente 2. reda: Unesite elemente 3. reda: Unesite elemente 4. reda: \\nNakon 1. prolaza matrica glasi:\\n    3    4    2\\n    6    7    8\\n   10   11   12\\n   14   15   16\\n\\nNakon 2. prolaza matrica glasi:\\n    3    4\\n    6    7\\n   10   11\\n   14   15\\n\\nNakon 3. prolaza matrica glasi:\\n    4\\n    7\\n   11\\n   15\\n\\nNakon 4. prolaza matrica je prazna!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10 2\n2 2 2 2 2 2 2 2 2 4\n3 3 3 3 3 3 3 3 3 3"
+            },
+            "expected": [
+                "Unesite sirinu i visinu matrice: Unesite elemente 1. reda: Unesite elemente 2. reda: \\nNakon 1. prolaza matrica je prazna!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

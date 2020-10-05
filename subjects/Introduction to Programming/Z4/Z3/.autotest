@@ -1,0 +1,269 @@
+{
+    "id": 3950,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Zada\u0107a 4, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3951,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT1\n        char niz[10];\n        najduzi_bp (\"Ovo je neki primjer teksta\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'primje'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'primje'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3952,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT2\n        char niz[10];\n        najduzi_bp (\"Ovo jev ovo aaaa\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'jev'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'jev'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3953,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT3\n        char niz[10];\n        najduzi_bp (\"Ovo jEv oVo aAaA\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'jEv'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'jEv'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3954,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT4, Ov\n        char niz[10];\n        najduzi_bp (\"Ovo\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'Ov'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'Ov'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3955,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT5, iste duzine su abcdef i bcdefg, ali je abcdef prva\n        char niz[10];\n        najduzi_bp (\"abcdef predsjed bcdefg\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'abcdef'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'abcdef'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3956,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT6, najduza je bcdefghi\n        char niz[10];\n        najduzi_bp (\"abcdef predsjed bcdefgi\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'bcdefgi'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'bcdefgi'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3958,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT8, broj se ne pika u duzinu\n        char niz[10];\n        najduzi_bp (\"abc abcd7efghi 7abcd8\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'efghi'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'efghi'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3962,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT10.2, najduzi podstring je zapravio omedjen slovima sa obje strane!\n     \/\/samo se prvi znak \"uzima\"\n        char niz[10];\n        najduzi_bp (\"abcde etankera cdefg\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'tanker'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'tanker'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3963,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT10.3, najduzi podstring je zapravio omedjen brojem sa jedne, slovom sa druge strane!\n        char niz[10];\n        najduzi_bp (\"abcde 7motikam cdefg\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'motika'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'motika'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3964,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT10.4, najduzi podstring je zapravio omedjen _ sa jedne, @ sa druge strane!\n        char niz[10];\n        najduzi_bp (\"_abCdeFgh@\", niz);\n        printf (\"Niz: '%s'\", niz);\n    }\/\/Niz: 'abCdeFgh'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz: 'abCdeFgh'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

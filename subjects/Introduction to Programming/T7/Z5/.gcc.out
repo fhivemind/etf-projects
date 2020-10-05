@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/OR/T7/Z5/main.c: In function ‘main’:
+/rhome/r/rpolic1/workspace/OR/T7/Z5/main.c:39:2: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+  printf("Razlika: %f (%.2f%)", fabs(value-r_sin), error);
+  ^

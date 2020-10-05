@@ -1,0 +1,244 @@
+{
+    "id": 395099,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Zada\u0107a 4, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 63,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT1: Primjeri iz zadatka\nchar tekst1[] = \"<div id=\\\"tekst\\\"><h2>Naslov<\/h2><p>Ovo je <b>cetvrti<\/b> i <i>posljednji<\/i> zadatak iz <a href=\\\"zadaca4\\\">zadace 4<\/a><\/p><\/div>\";\nchar tekst2[] = \"<b><a>proba<\/b><\/a>\";\nprintf(\"%d \", provjeri(tekst1));\nprintf(\"%d \", provjeri(tekst2));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 64,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT2: funkcija ne bi trebala da mijenja proslijedjeni string\n \/\/ispravan prototip funkcije je: int provjeri (const char *string);\n printf (\"Provjera 1: %d\\n\", provjeri (\"<div><h4>Naslov<\/h4><p>Danasnja vijest<\/div>\")); \/* <p> nije zatvoren *\/\n printf (\"Provjera 2: %d\\n\", provjeri (\"<div><h4>Naslov<\/h4><p>Danasnja vijest<\/p><\/div>\"));\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera 1: 0\\nProvjera 2: 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 65,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT3: pogresno zatvoreni tagovi i bez tagova\n printf (\"Provjera 1: %d\\n\", provjeri (\"<h3>Ovo je naslov velicine 3. h3 je skracenica za 'header of size 3', h1 je najveci!<\/h2>\")); \n printf (\"Provjera 2: %d\\n\", provjeri (\"Ovo je neki isjecak HTML-a koji je potpuno validan - nema tagova\"));\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera 1: 0\\nProvjera 2: 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 66,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\n{\/\/AT4: Prazni tagovi\n\tprintf (\"Provjera 1: %d\\n\", provjeri (\"<b><\/b>\"));\n\tprintf (\"Provjera 2: %d\\n\", provjeri (\"<html><head><title><\/title><\/head><body><p><\/p><\/body><\/html>\"));\n\tprintf (\"Provjera 3: %d\\n\", provjeri (\"<i>                          <\/i>\"));\n\tprintf (\"Provjera 4: %d\\n\", provjeri (\"      <i>              <\/i>      \"));\n\tprintf (\"Provjera 5: %d\\n\", provjeri (\"      <i>      <b><\/b>        <\/i>      \"));\n\tprintf (\"Provjera 6: %d\\n\", provjeri (\"      <i>      <b><\/b>        <i>      \")); \n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera 1: 1\\nProvjera 2: 1\\nProvjera 3: 1\\nProvjera 4: 1\\nProvjera 5: 1\\nProvjera 6: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 67,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT5: real-world example (dio stranice etf.unsa.ba, sa popravljenim <br> tagovima)\nchar etfunsaba[] = \"<center>\"\n\t\"<a href=\\\"http:\/\/icat.etf.unsa.ba\/\\\">\"\n        \"<p class=\\\"tekst\\\">\"\n        \"<span class=\\\"linkovi\\\">\"\n\t\t\"XXVI International Conference on Information,\"\n\t\t\"<br><\/br>\"\n\t\t\"Communication and Automation Technologies\"\n\t\t\"<br><\/br>\"\n\t\t\"<br><\/br>\"\n\t\t\"<strong>ICAT 2017<\/strong><br><\/br>\"\n\t\t\"<br><\/br>\"\n\t\t\"Sarajevo, Bosnia and Herzegovina<br><\/br>\"\n\t\t\"October 26-28, 2017.<br><\/br>\"\n\t\t\"<\/span>\"\n        \"<\/p>\"\n        \"<\/a>\"\n    \"<\/center>\";\n    printf (\"Provjera 1: %d\\n\", provjeri (etfunsaba));\n    \/\/izmijenimo prvi tag <center> da bude <zenter>, pa onda nema zatvarajuceg\n    etfunsaba[1] = 'z';\n    printf (\"Provjera 2: %d\\n\", provjeri (etfunsaba));\n\t\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera 1: 1\\nProvjera 2: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 69,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT7: vise zatvorenih nego otvorenih\n\tprintf (\"Provjera 1: %d\\n\", provjeri(\"<span><span><span><a href='https:\/\/etf.unsa.ba'>etf.unsa.ba stranica<\/a><\/span><\/span>\"));\n\tprintf (\"Provjera 2: %d\\n\", provjeri(\"<span><span><span><a href='https:\/\/etf.unsa.ba'>etf.unsa.ba stranica<\/a><span><\/span><\/span>\"));\n\tprintf (\"Provjera 3: %d\\n\", provjeri(\"<span><span><span><a href='https:\/\/etf.unsa.ba'>etf.unsa.ba stranica<\/span><\/span><\/span>\"));\n\tprintf (\"Provjera 4: %d\\n\", provjeri(\"<span><span><span><a href='https:\/\/etf.unsa.ba'>etf.unsa.ba stranica<\/a><\/span><\/span><\/span>\"));\n\t\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera 1: 0\\nProvjera 2: 0\\nProvjera 3: 0\\nProvjera 4: 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 70,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT8: HTML je validan i sa velikim slovima za TAGove, tipa <p>paragraf<\/P>\n\t\n\tprintf (\"Provjera 1: %d\\n\", provjeri(\"<a href='https:\/\/etfba.slack.com'>DODJITE svi na HABER (etf.ba)!<\/A>\"));\n\tprintf (\"Provjera 2: %d\\n\", provjeri(\"<P><a href='https:\/\/etfba.slack.com'>DODJITE svi na HABER (etf.ba)!<\/A><\/P>\"));\n\tprintf (\"Provjera 3: %d\\n\", provjeri(\"<DiV><P><a href='https:\/\/etfba.slack.com'>DODJITE svi na HABER (etf.ba)!<\/A><\/P><dIv>\"));\n\tprintf (\"Provjera 3: %d\\n\", provjeri(\"<DiV><P><a href='https:\/\/etfba.slack.com'>DODJITE svi na HABER (etf.ba)!<\/A><\/P><\/dIv>\"));\n\tprintf (\"Provjera 4: %d\\n\", provjeri(\"<h1><P><a href='https:\/\/etfba.slack.com'>DODJITE svi na HABER (etf.ba)!<\/B><\/P><\/h1>\"));\n\tprintf (\"Provjera 5: %d\\n\", provjeri(\"<a><\/a><\/a>jedan jako specijalan slucaj\"));\n\t\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera 1: 1\\nProvjera 2: 1\\nProvjera 3: 0\\nProvjera 3: 1\\nProvjera 4: 0\\nProvjera 5: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 71,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT9: bas neregularan HTML\n\tprintf (\"Provjera  0: %d\\n\", provjeri(\"<\/p><p>pocelo je zatvorenim tagom<\/p>\"));\n\tprintf (\"Provjera  1: %d\\n\", provjeri(\"<p>ovdje ide greska <, znak 'manje' ne smije biti ovdje, pise se inace <<\/p>\"));\n\tprintf (\"Provjera  2: %d\\n\", provjeri(\"<p>jos gore, xd, <\/ <\/p>\"));\n\tprintf (\"Provjera  3: %d\\n\", provjeri(\"<p>jos gore^2, xd, <\/p <\/p>\"));\n\tprintf (\"Provjera  4: %d\\n\", provjeri(\"<p>jos gore, xd<\/p><p\"));\n\tprintf (\"Provjera  5: %d\\n\", provjeri(\"<p>hah, nesto fino p <\/p><p><\/p>\"));\n\tprintf (\"Provjera  6: %d\\n\", provjeri(\"< p> razmak prije p <\/p>\"));\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera  0: 0\\nProvjera  1: 0\\nProvjera  2: 0\\nProvjera  3: 0\\nProvjera  4: 0\\nProvjera  5: 1\\nProvjera  6: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 72,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT10: nastavak, neregularan HTML\n\tprintf (\"Provjera  7: %d\\n\", provjeri(\"<p>razmak prije p a poslije \/ <\/ p>\"));\n\tprintf (\"Provjera  8: %d\\n\", provjeri(\"<p   >a ovo je ipak validno, razmaci NAKON p<\/p>\"));\n\tprintf (\"Provjera  9: %d\\n\", provjeri(\"<p   >i ovo je validno, razmaci NAKON p<\/p    >\"));\n\tprintf (\"Provjera 10: %d\\n\", provjeri(\"<><\/>\")); \/* nije validno *\/\n\tprintf (\"Provjera 11: %d\\n\", provjeri(\"\")); \/* ok *\/\n\tprintf (\"Provjera 12: %d\\n\", provjeri(\"                                            \")); \/* ok *\/\n\tprintf (\"Provjera 13: %d\\n\", provjeri(\"< p> razmak prije p i prije \/ p, sto nije ispravno!  <\/ p>\"));\n\t\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Provjera  7: 0\\nProvjera  8: 1\\nProvjera  9: 1\\nProvjera 10: 0\\nProvjera 11: 1\\nProvjera 12: 1\\nProvjera 13: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

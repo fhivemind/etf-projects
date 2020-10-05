@@ -1,0 +1,269 @@
+{
+    "id": 5365,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Zada\u0107a 1, zadatak 1",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "H\nH\nH"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Fast-food \"Trovac\" (9.00 KM).\\nSa popustom bi Restoran bio jeftiniji (8.91 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "P\nP\nP"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Bistro \"Lorelei\" (15.90 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "H\nP\nP"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Bistro \"Lorelei\" (15.60 KM).\\nSa popustom bi Restoran bio jeftiniji (15.54 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "H\nH\nP"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Restoran \"Kod konja i konjusara\" (13.40 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "C\nH\nP"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Fast-food \"Trovac\" (14.90 KM).\\nSa popustom bi Restoran bio jeftiniji (14.42 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "C\nP\nC"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Fast-food \"Trovac\" (15.80 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "P\nP\nC"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Bistro \"Lorelei\" (16.60 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "H\nC\nC"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Fast-food \"Trovac\" (10.80 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "C\nH\nH"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Fast-food \"Trovac\" (9.90 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "C\nC\nC"
+            },
+            "expected": [
+                "Unesite jelo za Tarika: Unesite jelo za Bojana: Unesite jelo za Mirzu: Najjeftiniji je Fast-food \"Trovac\" (11.70 KM)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

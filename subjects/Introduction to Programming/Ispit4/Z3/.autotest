@@ -1,0 +1,220 @@
+{
+    "id": 5444,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Ispit 4, zadatak 3",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Test funkcije ucitaj sa datotekom na serveru *\/\nstruct Osoba osobe[100];\nint vel;\nvel = ucitaj(osobe, 100, \"vozaci.txt\");\nispisi(osobe, vel);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Meho Mehic - VW Beetle\\nSara Sarac - Mercedes\\nMia Martina Mijic - Tesla Model S\\nSamoime - Porsche Cayenne"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Prekoracenje kapaciteta *\/\nstruct Osoba osobe[2];\nint vel;\nvel = ucitaj(osobe, 2, \"vozaci.txt\");\nispisi(osobe, vel);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Meho Mehic - VW Beetle\\nSara Sarac - Mercedes"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Test funkcije vozaci *\/\nstruct Osoba osobe[100] = {\n\t{\"Meho Mehic\", {15, 2, 1990}, {\"VW Beetle\", \"benzin\", {13, 11, 2016}}},\n\t{\"Sara Sarac\", {4, 12, 1991}, {\"Mercedes\", \"dizel\", {11, 3, 2014}}},\n\t{\"Mia Martina Mijic\", {29, 11, 1990}, {\"Tesla Model S\", \"struja\", {3, 2, 2018}}},\n\t{\"Samoime\", {22, 12, 1990}, {\"Porsche Cayenne\", \"benzin\", {11, 3, 2014}}}\n};\nvozaci(osobe, 4);\nstrcpy(osobe[2].vozilo.vrsta_goriva, \"benzin\");\nvozaci(osobe, 4);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Samoime\\nMia Martina Mijic\\nSamoime"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Da li se gleda kompletan datum? *\/\nstruct Osoba osobe[100] = {\n\t{\"Mia Martina Mijic\", {29, 11, 1990}, {\"Tesla Model S\", \"struja\", {3, 2, 2018}}},\n\t{\"Meho Mehic\", {15, 2, 1990}, {\"VW Beetle\", \"benzin\", {13, 11, 2016}}},\n\t{\"Sara Sarac\", {4, 12, 1991}, {\"Mercedes\", \"dizel\", {11, 3, 2014}}},\n\t{\"Samoime\", {22, 12, 1990}, {\"Porsche Cayenne\", \"benzin\", {11, 3, 2014}}},\n\t{\"Meho Puzigaca\", {1, 10, 1990}, {\"VW eGolf\", \"struja\", {1, 2, 2017}}},\n};\nvozaci(osobe, 4);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Samoime"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Provjera funkcije zapisi_vozila *\/\nstruct Osoba osobe[100] = {\n\t{\"Mia Martina Mijic\", {29, 11, 1990}, {\"Tesla Model S\", \"struja\", {3, 2, 2018}}},\n\t{\"Meho Mehic\", {15, 2, 1990}, {\"VW Beetle\", \"benzin\", {13, 11, 2016}}},\n\t{\"Sara Sarac\", {4, 12, 1991}, {\"Mercedes\", \"dizel\", {11, 3, 2014}}},\n\t{\"Samoime\", {22, 12, 1990}, {\"Porsche Cayenne\", \"benzin\", {11, 3, 2014}}},\n\t{\"Meho Puzigaca\", {1, 10, 1990}, {\"VW eGolf\", \"struja\", {1, 2, 2017}}},\n};\nzapisi_vozila(osobe, 5);\nstruct Vozilo provjera[100];\nFILE* bin = fopen(\"vozila.dat\", \"rb\");\nint i, vel = fread(provjera, sizeof(struct Vozilo), 100, bin);\nfclose(bin);\nfor (i=0; i<vel; i++) \n\tprintf(\"%s - %s - %d,%d,%d\\n\", provjera[i].model, provjera[i].vrsta_goriva, provjera[i].registracija.dan, provjera[i].registracija.mjesec, provjera[i].registracija.godina);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tesla Model S - struja - 3,2,2018\\nVW Beetle - benzin - 13,11,2016\\nMercedes - dizel - 11,3,2014\\nPorsche Cayenne - benzin - 11,3,2014\\nVW eGolf - struja - 1,2,2017"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Provjera ponavljanja u funkciji zapisi_vozila *\/\nstruct Osoba osobe[100] = {\n\t{\"Mia Martina Mijic\", {29, 11, 1990}, {\"Tesla Model S\", \"struja\", {3, 2, 2018}}},\n\t{\"Meho Mehic\", {15, 2, 1990}, {\"Tesla Model S\", \"benzin\", {3, 2, 2018}}},\n\t{\"Sara Sarac\", {4, 12, 1991}, {\"Tesla Model S\", \"struja\", {3, 2, 2018}}},\n\t{\"Samoime\", {22, 12, 1990}, {\"Tesla Model S\", \"struja\", {3, 1, 2018}}},\n\t{\"Meho Puzigaca\", {1, 10, 1990}, {\"Tesla Model S\", \"struja\", {3, 2, 2017}}},\n\t{\"Pero Peric\", {1, 10, 1990}, {\"Tesla Model S\", \"struja\", {3, 2, 2018}}},\n\t{\"Jovo Jovic\", {1, 10, 1990}, {\"Tesla Model S\", \"struja\", {1, 2, 2018}}},\n\t{\"Ahmo Ahmic\", {1, 10, 1990}, {\"Tesla Model 3\", \"struja\", {3, 2, 2018}}},\n};\nzapisi_vozila(osobe, 8);\nstruct Vozilo provjera[100];\nFILE* bin = fopen(\"vozila.dat\", \"rb\");\nint i, vel = fread(provjera, sizeof(struct Vozilo), 100, bin);\nfclose(bin);\nfor (i=0; i<vel; i++) \n\tprintf(\"%s - %s - %d,%d,%d\\n\", provjera[i].model, provjera[i].vrsta_goriva, provjera[i].registracija.dan, provjera[i].registracija.mjesec, provjera[i].registracija.godina);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tesla Model S - struja - 3,2,2018\\nTesla Model S - benzin - 3,2,2018\\nTesla Model S - struja - 3,1,2018\\nTesla Model S - struja - 3,2,2017\\nTesla Model S - struja - 1,2,2018\\nTesla Model 3 - struja - 3,2,2018"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT7: Test prekoracenja velicine stringa *\/\nstruct Osoba osobe[100];\nFILE* txt = fopen(\"at7.txt\", \"w\");\nfputs(\"Meho Mehic,15,2,1990,VW Beetle,benzin,13,11,2016\\n\", txt);\nfputs(\"Asdfkj slkfd lskflks lksdfl wei wieoij qoiwjreo oqwiejr sdflk jkfsdo lskjdf,15,2,1990,VW Beetle,benzin,13,11,2016\\n\", txt);\nfputs(\"Meho Mehic,15,2,1990,ALSkflaksdl asjfakj lskf lajdfk ksfdj ksdfkj ksjdfkj slklfdks,benzin,13,11,2016\\n\", txt);\nfputs(\"Meho Mehic,15,2,1990,VW Beetle,ALSkflaksdl asjfakj lskf lajdfk ksfdj ksdfkj ksjdfkj slklfdks,13,11,2016\\n\", txt);\nfclose(txt);\nint vel;\nvel = ucitaj(osobe, 100, \"at7.txt\");\nispisi(osobe, vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Meho Mehic - VW Beetle\\nAsdfkj slkfd lskflks lksdfl wei wieoij qoiwjreo o - VW Beetle\\nMeho Mehic - ALSkflaksdl asjfakj lskf lajdfk ksfdj ksdfkj ksjd\\nMeho Mehic - VW Beetle",
+                "Meho Mehic - VW Beetle\\nAsdfkj slkfd lskflks lksdfl wei wieoij qoiwjreo oq - VW Beetle\\nMeho Mehic - ALSkflaksdl asjfakj lskf lajdfk ksfdj ksdfkj ksjdf\\nMeho Mehic - VW Beetle"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT8: kombinacija ucitaj i zapisi *\/\nstruct Osoba osobe[100];\nFILE* txt = fopen(\"at8.txt\", \"w\");\nfputs(\"Meho Mehic,15,2,1990,VW Beetle,benzin,13,11,2016\\n\", txt);\nfputs(\"Asdfkj slkfd lskflks lksdfl wei wieoij qoiwjreo,15,2,1990,VW Beetle,benzin,13,11,2016\\n\", txt);\nfputs(\"Meho Mehic,15,2,1990,ALSkflaksdl asjfakj lskf lajdfk ksfdj ksdfkj,benzin,13,11,2016\\n\", txt);\nfputs(\"Meho Mehic,15,2,1990,VW Beetle,asdfgjkkl,13,11,2016\", txt);\nfclose(txt);\n\nint vel;\nvel = ucitaj(osobe, 100, \"at8.txt\");\nzapisi_vozila(osobe, vel);\n\nstruct Vozilo provjera[100];\nFILE* bin = fopen(\"vozila.dat\", \"rb\");\nint i;\nvel = fread(provjera, sizeof(struct Vozilo), 100, bin);\nfclose(bin);\nfor (i=0; i<vel; i++) \n    printf(\"%s - %s - %d,%d,%d\\n\", provjera[i].model, provjera[i].vrsta_goriva, provjera[i].registracija.dan, provjera[i].registracija.mjesec, provjera[i].registracija.godina);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "VW Beetle - benzin - 13,11,2016\\nALSkflaksdl asjfakj lskf lajdfk ksfdj ksdfkj - benzin - 13,11,2016\\nVW Beetle - asdfgjkkl - 13,11,2016"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

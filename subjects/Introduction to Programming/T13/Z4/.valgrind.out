@@ -1,0 +1,22 @@
+==14259== Memcheck, a memory error detector
+==14259== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==14259== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==14259== Command: /rhome/r/rpolic1/workspace/OR/T13/Z4/.runme
+==14259== Parent PID: 14212
+==14259== 
+==14259== 
+==14259== HEAP SUMMARY:
+==14259==     in use at exit: 1,136 bytes in 2 blocks
+==14259==   total heap usage: 8 allocs, 6 frees, 4,544 bytes allocated
+==14259== 
+==14259== LEAK SUMMARY:
+==14259==    definitely lost: 0 bytes in 0 blocks
+==14259==    indirectly lost: 0 bytes in 0 blocks
+==14259==      possibly lost: 0 bytes in 0 blocks
+==14259==    still reachable: 1,136 bytes in 2 blocks
+==14259==         suppressed: 0 bytes in 0 blocks
+==14259== Reachable blocks (those to which a pointer was found) are not shown.
+==14259== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==14259== 
+==14259== For counts of detected and suppressed errors, rerun with: -v
+==14259== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

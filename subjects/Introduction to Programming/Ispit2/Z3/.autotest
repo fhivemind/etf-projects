@@ -1,0 +1,144 @@
+{
+    "id": 234410,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 2, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2353,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Primjer iz zadatka *\/\nint c, br_tijela;\nstruct Tijelo niz[10];\n\nFILE* ulaz = fopen(\"geometrija.txt\", \"w\");\nfputs(\"K4.5T3,2K4P8.1,7.2\", ulaz);\nfclose(ulaz);\n\nbr_tijela = ucitaj(niz, 10);\nzapisi(niz, br_tijela);\n\nprintf(\"Izlazna datoteka glasi:\\n\");\nFILE* izlaz = fopen(\"geometrija-sortirano.txt\", \"r\");\ndo {\n    c = fgetc(izlaz);\n    if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(izlaz);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka glasi:\\nKrug 4.50\\nPravougaonik 8.10 7.20\\nKrug 4.00\\nTrougao 3.00 2.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2354,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Primjer iz zadatka *\/\nint c, br_tijela;\nstruct Tijelo niz[10];\n\nFILE* ulaz = fopen(\"geometrija.txt\", \"w\");\nfputs(\"K4.5T3,2K4P8.1,7.2\", ulaz);\nfclose(ulaz);\n\nbr_tijela = ucitaj(niz, 10);\nprintf(\"Povrsina svih tijela je %.2f\\n\", povrsina(niz, br_tijela));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Povrsina svih tijela je 175.20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2355,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Veliki broj tijela *\/\nint c, br_tijela, i;\ndouble radijus=1;\nstruct Tijelo niz[100];\n\nFILE* ulaz = fopen(\"geometrija.txt\", \"w\");\nfor (i=0; i<100; i++) {\n    fprintf(ulaz, \"K%.1f\", radijus);\n    radijus += 0.1;\n}\n\/* Ovaj krug nece biti uzeti u obzir jer je 101. *\/\nfprintf(ulaz, \"K%.1f\", radijus);\nfclose(ulaz);\n\nbr_tijela = ucitaj(niz, 100);\nzapisi(niz, br_tijela);\n\nprintf(\"Broj tijela: %d\\n\", br_tijela);\nprintf(\"Izlazna datoteka glasi:\\n\");\nFILE* izlaz = fopen(\"geometrija-sortirano.txt\", \"r\");\ndo {\n    c = fgetc(izlaz);\n    if (c != EOF) printf(\"%c\", c);\n} while (c != EOF && c != 10); \/* Prekidamo petlju na \\n *\/\nfclose(izlaz);\n\n\/* Najprije ce biti ispisan najveci krug *\/",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj tijela: 100\\nIzlazna datoteka glasi:\\nKrug 10.90\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2356,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Veliki broj tijela *\/\nint c, br_tijela, i;\ndouble radijus=1;\nstruct Tijelo niz[100];\n\nFILE* ulaz = fopen(\"geometrija.txt\", \"w\");\nfor (i=0; i<100; i++) {\n    fprintf(ulaz, \"K%.1f\", radijus);\n    radijus += 0.1;\n}\n\/* Ovaj krug nece biti uzeti u obzir jer je 101. *\/\nfprintf(ulaz, \"K%.1f\", radijus);\nfclose(ulaz);\n\nbr_tijela = ucitaj(niz, 100);\nprintf(\"Povrsina svih tijela je %.2f\\n\", povrsina(niz, br_tijela));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Povrsina svih tijela je 13739.76"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2374,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Trougao realni parametri, krug i pravougaonik cjelobrojni *\/\nint c, br_tijela;\nstruct Tijelo niz[10];\n\nFILE* ulaz = fopen(\"geometrija.txt\", \"w\");\nfputs(\"K412T.15,1.137K100P12345,12345\", ulaz);\nfclose(ulaz);\n\nbr_tijela = ucitaj(niz, 10);\nzapisi(niz, br_tijela);\n\nprintf(\"Izlazna datoteka glasi:\\n\");\nFILE* izlaz = fopen(\"geometrija-sortirano.txt\", \"r\");\ndo {\n    c = fgetc(izlaz);\n    if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(izlaz);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka glasi:\\nPravougaonik 12345.00 12345.00\\nKrug 412.00\\nKrug 100.00\\nTrougao 0.15 1.14"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

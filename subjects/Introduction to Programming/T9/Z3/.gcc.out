@@ -1,0 +1,8 @@
+/rhome/r/rpolic1/workspace/OR/T9/Z3/main.c: In function ‘unesi’:
+/rhome/r/rpolic1/workspace/OR/T9/Z3/main.c:6:2: warning: ISO C90 forbids mixed declarations and code [-Wpedantic]
+  int i = 0;
+  ^
+/rhome/r/rpolic1/workspace/OR/T9/Z3/main.c: In function ‘main’:
+/rhome/r/rpolic1/workspace/OR/T9/Z3/main.c:66:2: warning: too many arguments for format [-Wformat-extra-args]
+  printf("\nBroj samoglasnika je: %d", c, samoglasnici(a));
+  ^

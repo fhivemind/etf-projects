@@ -1,0 +1,21 @@
+==6699== Memcheck, a memory error detector
+==6699== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==6699== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==6699== Command: /rhome/r/rpolic1/workspace/OR/T9/Z3/.runme
+==6699== Parent PID: 6686
+==6699== 
+==6699== Conditional jump or move depends on uninitialised value(s)
+==6699==    at 0x40078D: duzina (main.c:38)
+==6699==    by 0x4007E3: samoglasnici (main.c:48)
+==6699==    by 0x400910: main (main.c:66)
+==6699== 
+==6699== 
+==6699== HEAP SUMMARY:
+==6699==     in use at exit: 0 bytes in 0 blocks
+==6699==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==6699== 
+==6699== All heap blocks were freed -- no leaks are possible
+==6699== 
+==6699== For counts of detected and suppressed errors, rerun with: -v
+==6699== Use --track-origins=yes to see where uninitialised values come from
+==6699== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

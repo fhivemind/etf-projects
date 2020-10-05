@@ -1,0 +1,169 @@
+{
+    "id": 5396,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Zada\u0107a 3, zadatak 3",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int brojevi[] = {12345, -12345};\nint cifre[] = {3,5};\nint i;\nizbaci_cifre(brojevi, 2, cifre, 2);\nprintf(\"%d %d\", brojevi[0], brojevi[1]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "124 -124"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int brojevi[] = {25, 235, 1235, 252, 22552255};\nint cifre[] = {2, 3, 5};\nint i;\nizbaci_cifre(brojevi, 5, cifre, 3);\nfor (i=0; i<5; i++)\n  printf(\"%d \", brojevi[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 1 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int brojevi[] = {123, 456};\nint cifre1[] = {1, 2, 3, 1};\nint cifre2[] = {1, 2, 10, 4};\nint cifre3[] = {1, 2, 3, -4};\nint i, rez;\nrez = izbaci_cifre(brojevi, 2, cifre1, 4);\nprintf(\"%d\\n\", rez);\nrez = izbaci_cifre(brojevi, 2, cifre2, 4);\nprintf(\"%d\\n\", rez);\nrez = izbaci_cifre(brojevi, 2, cifre3, 4);\nprintf(\"%d\\n\", rez);\ncifre3[3] = 4;\nrez = izbaci_cifre(brojevi, 2, cifre3, 4);\nprintf(\"%d\\n\", rez);\nprintf(\"%d %d\", brojevi[0], brojevi[1]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0\\n0\\n0\\n1\\n0 56"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int brojevi[] = {9869, -4481, 55422, -5353};\nint cifre[] = {2, 3, 5, 7, 9};\nint i;\nizbaci_cifre(brojevi, 4, cifre, 5);\nfor (i=0; i<4; i++)\n  printf(\"%d \", brojevi[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "86 -4481 4 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int brojevi[] = {54321, -54321};\nint cifre[] = {5,1};\nint i;\nizbaci_cifre(brojevi, 2, cifre, 0);\nprintf(\"%d %d\\n\", brojevi[0], brojevi[1]);\nizbaci_cifre(brojevi, 2, cifre, 2);\nprintf(\"%d %d\", brojevi[0], brojevi[1]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "54321 -54321\\n432 -432"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int brojevi[] = {54321, -54321};\nint cifre1[]={-1,0,1};\nprintf(\"%d \", izbaci_cifre(brojevi, 2, cifre1, 3));\nint cifre2[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14};\nprintf(\"%d \", izbaci_cifre(brojevi, 2, cifre2, 15));\nint cifre3[]={0,1,2,3,4,5,6,7,8,9,0,1,2,3,4};\nprintf(\"%d \", izbaci_cifre(brojevi, 2, cifre3, 15));\nprintf(\"%d\\n\", izbaci_cifre(brojevi, 2, cifre3, 10));\nprintf(\"%d %d\", brojevi[0], brojevi[1]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 0 1\\n0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

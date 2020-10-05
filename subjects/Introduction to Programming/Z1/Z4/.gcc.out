@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/OR/Z1/Z4/main.c: In function ‘main’:
+/rhome/r/rpolic1/workspace/OR/Z1/Z4/main.c:31:2: warning: ISO C90 forbids mixed declarations and code [-Wpedantic]
+  int i, j;
+  ^

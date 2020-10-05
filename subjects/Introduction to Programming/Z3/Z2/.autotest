@@ -1,0 +1,219 @@
+{
+    "id": 1808,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Ispit 4, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1809,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "   int i;\n    float niz[] = { 13.1, 15.749999, 15.75, 9.222, 78.1 };\n    preslozi(niz, 5, 14);\n    printf(\"Niz glasi: \");\n    for (i=0; i<5; i++)\n        printf(\"%g \", niz[i]);\n ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: 15.8 78.1 13.1 15.7 9.2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1810,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nfloat niz[] = { 13.1, 15.749999, 15.75, 9.222, 78.1 };\nzaokruzi1(niz, 5);\nprintf(\"Niz glasi: \");\nfor (i=0; i<5; i++)\n    printf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: 13.1 15.7 15.8 9.2 78.1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1811,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nfloat niz[] = { -1.0, -0.1, -0.19999, -4.449999, -4.45001 };\nzaokruzi1(niz, 5);\nprintf(\"Niz glasi: \");\nfor (i=0; i<5; i++)\n    printf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: -1 -0.1 -0.2 -4.4 -4.5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1812,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nfloat niz[] = { -25.99999, 0.1, 0.19999, 123.456, -123.456 };\nzaokruzi1(niz, 5);\nprintf(\"Niz glasi: \");\nfor (i=0; i<5; i++)\n    printf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: -26 0.1 0.2 123.5 -123.5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1813,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nfloat niz[] = { -1.0, -0.1, -0.19999, -4.449999, -4.45001 };\npreslozi(niz, 5, 8);\nprintf(\"Niz glasi: \");\nfor (i=0; i<5; i++)\n    printf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: -4.4 -4.5 -1 -0.1 -0.2 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1814,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nfloat niz[] = { 3.2, -4.301, -123.1999, 1.1, 0.9 };\npreslozi(niz, 5, 8);\nprintf(\"Niz glasi: \");\nfor (i=0; i<5; i++)\n    printf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: -123.2 0.9 3.2 -4.3 1.1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1815,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nfloat niz[] = { 3.2, -4.301, -123.1999, 6.1, 0.9 };\npreslozi(niz, 5, 4);\nprintf(\"Niz glasi: \");\nfor (i=0; i<5; i++)\n    printf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: 3.2 -4.3 -123.2 6.1 0.9 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1816,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int i;\nfloat niz[] = { -1.0, -0.1, -0.19999, -4.449999, -4.45001 };\nzaokruzi1(niz,5);\npreslozi(niz, 0, 8);\nprintf(\"Niz glasi: \");\nfor (i=0; i<5; i++)\n    printf(\"%g \", niz[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niz glasi: -1 -0.1 -0.2 -4.4 -4.5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

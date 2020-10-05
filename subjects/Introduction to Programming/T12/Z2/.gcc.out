@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/OR/T12/Z2/main.c: In function ‘main’:
+/rhome/r/rpolic1/workspace/OR/T12/Z2/main.c:47:13: warning: unknown escape sequence: '\B' [enabled by default]
+     printf ("Broj redova: %d\nBroj rijeci: %d\nBroj znakova: %d\n\Broj samoglasnika: %d\nBroj velikih slova: %d\nBroj cifara: %d", broj_redova, broj_rijeci, broj_znakova, _vow, _upps, _nums);
+             ^

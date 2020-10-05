@@ -1,0 +1,194 @@
+{
+    "id": 393802,
+    "name": "Osnove ra\u010dunarstva (2017\/2018), Zada\u0107a 4, Zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Primjer iz zadatka *\/\nchar s[44] = \"Ovo je neki primjer teksta\";\nprintf(\"\\\"%s\\\"\", ubaci_broj(s, 123));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\"Ovo 123 je 123 neki 123 primjer 123 teksta\""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Negativan broj *\/\nchar s[65] = \"Sada cemo probati sa negativnim brojem\";\nprintf(\"\\\"%s\\\"\", ubaci_broj(s, -528));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\"Sada -528 cemo -528 probati -528 sa -528 negativnim -528 brojem\""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Jedna rijec u stringu, nema ubacivanja *\/\nchar s[12] = \"hello.world\";\nchar s2[15] = \"hello world\";\nprintf(\"\\\"%s\\\"\\n\", ubaci_broj(s, 15));\nprintf(\"\\\"%s\\\"\", ubaci_broj(s2, 15));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\"hello.world\"\\n\"hello 15 world\""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Vise razmaka izmedju rijeci *\/\nchar s[77] = \"Ovdje  izmedju    rijeci ima      po nekoliko   razmaka\";\nprintf(\"\\\"%s\\\"\", ubaci_broj(s, 320));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\"Ovdje 320 izmedju 320   rijeci 320 ima 320     po 320 nekoliko 320  razmaka\""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Razmaci na pocetku stringa *\/\nchar s[57] = \"     Ovaj string pocinje razmacima\";\nprintf(\"\\\"%s\\\"\", ubaci_broj(s, -98765));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\"     Ovaj -98765 string -98765 pocinje -98765 razmacima\""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Razmaci na kraju stringa *\/\nchar s[66] = \"a sada i primjer koji se zavrsava razmacima       \";\nprintf(\"\\\"%s\\\"\", ubaci_broj(s, 1));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\"a 1 sada 1 i 1 primjer 1 koji 1 se 1 zavrsava 1 razmacima       \""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT7: Razmaci na pocetku i kraju, nema ubacivanja *\/\nchar s[19] = \"     auto!stop   \";\nchar s2[22] = \"     auto stop   \";\nprintf(\"\\\"%s\\\"\\n\", ubaci_broj(s, 9999));\nprintf(\"\\\"%s\\\"\", ubaci_broj(s2, 9));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\"     auto!stop   \"\\n\"     auto 9 stop   \"\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

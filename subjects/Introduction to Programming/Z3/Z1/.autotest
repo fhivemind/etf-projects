@@ -1,0 +1,144 @@
+{
+    "id": 234414,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 4, Zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2690,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Primjer iz zadatka *\/\nint niz1[] = {1, 2, 3, 5};\nint niz2[] = {1, 2, 4, 6, 7};\nint niz3[] = {1, 3, 4, 8, 9, 10};\nint rez = dva_od_tri(niz1, 4, niz2, 5, niz3, 6);\nprintf(\"%d\", rez);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2691,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Rad sa praznim nizom *\/\nint niz1[] = {1, 2, 3, 4};\nint niz2[] = {2, 3, 4, 5};\nint niz3[] = {3, 4, 5, 6};\nint niz4[1];\nint rez = dva_od_tri(niz1, 4, niz2, 4, niz4, 0);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz1, 4, niz4, 0, niz3, 4);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz4, 0, niz2, 4, niz3, 4);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz1, 4, niz2, 4, niz3, 4);\nprintf(\"%d \", rez);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 2 3 2 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2692,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Bez preklapanja \/ puno preklapanje *\/\nint niz1[] = {1, 2, 3};\nint niz2[] = {4, 5, 6};\nint niz3[] = {7, 8, 9};\nint rez = dva_od_tri(niz1, 3, niz2, 3, niz3, 3);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz1, 3, niz2, 3, niz1, 3);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz1, 3, niz1, 3, niz1, 3);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz1, 3, niz3, 3, niz3, 3);\nprintf(\"%d \", rez);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 3 0 3 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2694,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Ponavljanje *\/\nint niz1[] = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2};\nint niz2[] = {3, 3, 3, 2, 2};\nint niz3[] = {1, 3, 4};\nint rez = dva_od_tri(niz1, 11, niz2, 5, niz3, 3);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz1, 11, niz1, 11, niz1, 3);\nprintf(\"%d \", rez);\nrez = dva_od_tri(niz1, 11, niz1, 11, niz1, 11);\nprintf(\"%d \", rez);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3017,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/* AT5: ne smiju se modificirati nizovi *\/\n    int niz1[] = {1, 2, 3}, n1 = sizeof niz1 \/ sizeof *niz1;\n    int niz2[] = {3, 2, 3}, n2 = sizeof niz2 \/ sizeof *niz2;\n    int niz3[] = {2, 2}, n3 = sizeof niz3 \/ sizeof *niz3;\n    printf (\"%d \", dva_od_tri(niz1, n1, niz2, n2, niz3, n3));\n    printf (\"%d \", dva_od_tri(niz2, n2, niz3, n3, niz1, n1));\n    printf (\"%d \", dva_od_tri(niz2, n2, niz1, n1, niz3, n3));\n    printf (\"%d \", dva_od_tri(niz3, n3, niz2, n2, niz1, n1));\n    printf (\"%d\\n\", dva_od_tri(niz2, n2, niz2, n2, niz3, n3));\n\n    \/* Provjera da li su nizovi modificirani *\/\n    int i;\n    for (i = 0; i < n1; ++i)\n        printf (\"%d \", niz1[i]);\n    printf (\"\\n\");\n    for (i = 0; i < n2; ++i)\n        printf (\"%d \", niz2[i]);\n    printf (\"\\n\");\n    for (i = 0; i < n3; ++i)\n        printf (\"%d \", niz3[i]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 1 1 1\\n1 2 3\\n3 2 3\\n2 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

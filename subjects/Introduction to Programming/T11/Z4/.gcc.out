@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/OR/T11/Z4/main.c: In function ‘main’:
+/rhome/r/rpolic1/workspace/OR/T11/Z4/main.c:34:17: warning: unused variable ‘_passed’ [-Wunused-variable]
+  struct Vrijeme _passed;
+                 ^

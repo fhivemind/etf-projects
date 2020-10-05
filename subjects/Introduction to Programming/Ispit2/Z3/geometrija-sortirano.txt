@@ -1,0 +1,4 @@
+Krug 4.50
+Pravougaonik 8.10 7.20
+Krug 4.00
+Trougao 3.00 2.00

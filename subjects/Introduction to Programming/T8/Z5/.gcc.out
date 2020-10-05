@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/OR/T8/Z5/main.c: In function ‘zaokruzi’:
+/rhome/r/rpolic1/workspace/OR/T8/Z5/main.c:8:3: warning: value computed is not used [-Wunused-value]
+   *niz++;
+   ^

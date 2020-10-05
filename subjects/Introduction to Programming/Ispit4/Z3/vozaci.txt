@@ -1,0 +1,4 @@
+Meho Mehic,15,2,1990,VW Beetle,benzin,13,11,2016
+Sara Sarac,4,12,1991,Mercedes,dizel,11,3,2014
+Mia Martina Mijic,29,11,1990,Tesla Model S,struja,3,2,2018
+Samoime,22,12,1990,Porsche Cayenne,benzin,11,3,2014

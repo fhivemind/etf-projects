@@ -1,0 +1,119 @@
+{
+    "id": 393904,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 11, Zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Da li funkcija daj_najveci radi ispravno sa datotekom koja je na serveru? *\/\nstruct Oblik rez = daj_najveci();\nprintf(\"%s %g %g %g\\n\", rez.naziv, rez.stranice[0], rez.stranice[1], rez.stranice[2]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao 21.21 18.18 1.1\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Provjera funkcije dodaj_oblik *\/\nstruct Oblik niz[] = {\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {100.1, 100.1, 100.1}},\n   {\"Kvadrat\", 4, {1.1, 1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}}\n};\ndodaj_oblik(niz[0]);\ndodaj_oblik(niz[1]);\ndodaj_oblik(niz[2]);\ndodaj_oblik(niz[3]);\ndodaj_oblik(niz[4]);\n\n\/* Sada ce najveci oblik biti trougao sa stranicama 100.1 100.1 100.1 *\/\n\nstruct Oblik rez = daj_najveci();\nprintf(\"%s %g %g %g\\n\", rez.naziv, rez.stranice[0], rez.stranice[1], rez.stranice[2]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao 100.1 100.1 100.1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Provjera funkcije izbaci_duple *\/\nstruct Oblik niz[] = {\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {100.1, 100.1, 100.1}},\n   {\"Kvadrat\", 4, {1.1, 1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}}\n};\ndodaj_oblik(niz[0]);\ndodaj_oblik(niz[1]);\ndodaj_oblik(niz[2]);\ndodaj_oblik(niz[3]);\ndodaj_oblik(niz[4]);\n\nstruct Oblik rez = daj_najveci();\nprintf(\"%s %g %g %g\\n\", rez.naziv, rez.stranice[0], rez.stranice[1], rez.stranice[2]);\n\n\/* U datoteci se sada nalazi 5 oblika koji se zovu \"Trougao\" *\/\nizbaci_duple();\n\n\/* Ostace onaj koji je bio u polaznoj datoteci koja je na serveru *\/\nrez = daj_najveci();\nprintf(\"%s %g %g %g\\n\", rez.naziv, rez.stranice[0], rez.stranice[1], rez.stranice[2]);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao 100.1 100.1 100.1\\nTrougao 21.21 18.18 1.1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Dodatna provjera da li funkcija izbaci_duple zaista radi sto treba *\/\n\n\/* Datoteka na serveru sadrzi 4 oblika bez ponavljanja *\/\n\nstruct Oblik niz[] = {\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {100.1, 100.1, 100.1}},\n   {\"Kvadrat\", 4, {1.1, 1.1, 1.1, 1.1}},\n   {\"Trougao\", 3, {1.1, 1.1, 1.1}}\n};\ndodaj_oblik(niz[0]);\ndodaj_oblik(niz[1]);\ndodaj_oblik(niz[2]);\ndodaj_oblik(niz[3]);\ndodaj_oblik(niz[4]);\n\n\/* U datoteci se sada nalazi 5 trouglova i 2 Kvadrata *\/\n\nizbaci_duple();\n\n\/* Kada izbacimo duple vracamo se na onu polaznu datoteku koja sadrzi 4 oblika *\/\n\n\/* Citamo samo prva dva bajta u datoteci (zbog little-endian poretka to ce biti 4 i 0) *\/\nFILE* fp = fopen(\"oblici.dat\", \"rb\");\nint c, i=0;\ndo {\n        c = fgetc(fp);\n        if (i<2) printf(\"%d \", c);\n        i++;\n} while (c != EOF);\nfclose(fp);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

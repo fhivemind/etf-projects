@@ -1,0 +1,83 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-696.10.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:14:38: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘unsigned int *’ [-Wformat=]\n  printf(\"Unesite broj n: \"); scanf(\"%d\", &n);\n                                      ^\nmain.c:11:18: warning: unused variable ‘i’ [-Wunused-variable]\n  unsigned int n, i;\n                  ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "14",
+                "col": "38",
+                "message": "format '%d' expects argument of type 'int *', but argument 2 has type 'unsigned int *'",
+                "output": "/tmp/buildservice/bs_3970/main.c:14:38: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘unsigned int *’ [-Wformat=]  printf(\"Unesite broj n: \"); scanf(\"%d\", &n);                                      ^",
+                "code": "printf(\"Unesite broj n: \"); scanf(\"%d\", &n);"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "11",
+                "col": "18",
+                "message": "unused variable 'i'",
+                "output": "/tmp/buildservice/bs_3970/main.c:11:18: warning: unused variable ‘i’ [-Wunused-variable]  unsigned int n, i;                  ^",
+                "code": "unsigned int n, i;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1170": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj n: 20\n15\n14\n11\n10\n7\n5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1172": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj n: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1173": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj n: 50\n49\n45\n44\n42\n40\n35\n33\n30\n28\n25\n22\n21\n20\n15\n14\n11\n10\n7\n5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1509482041
+}

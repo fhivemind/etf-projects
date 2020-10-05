@@ -1,0 +1,22 @@
+Unesite sirinu i visinu matrice: Unesite elemente 1. reda: Unesite elemente 2. reda: Unesite elemente 3. reda: Unesite elemente 4. reda: ||||||||||||| BRISI OVAJ 1
+
+Nakon 1. prolaza matrica glasi: 
+    4    2    3
+    6    7    8
+   10   11   12
+   14   15   16
+||||||||||||| BRISI OVAJ 2
+
+Nakon 2. prolaza matrica glasi: 
+    4    3
+    6    8
+   10   12
+   14   16
+||||||||||||| BRISI OVAJ 3
+
+Nakon 3. prolaza matrica glasi: 
+    4
+    6
+   10
+   14
+Nakon 4. prolaza matrica je prazna!

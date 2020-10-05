@@ -1,0 +1,269 @@
+{
+    "id": 234411,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 2, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2367,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Neki clanovi ce biti izbaceni *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {1, 3, 1980} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1980 } },\n    { \"Pero Peric\", { 1, 2, 1980 } },\n    { \"Sara Sarac\", { 2, 2, 1980 } },\n    { \"Fata Mujic\", { 1, 2, 1976 } },\n    { \"Jozo Jozic\", { 1, 10, 1980 } },\n    { \"Mijo Mijic\", { 4, 3, 1979 } },\n    { \"Suljo Suljic\", { 15, 1, 1982 } },\n};\n\n\/* 1980 godina je bila prestupna, februar je imao 29 dana,\n   sto znaci da je Pero Peric za 29 dana stariji od direktora,\n   pa kako je 29>28 Pero treba biti izbacen a Sara ne. *\/\n\nint novi_br = suzi_listu(kandidati, 7, direktor, 28);\nint i;\nprintf(\"Nakon suzenja liste:\\n\");\nfor (i=0; i<novi_br; i++)\n    printf(\"%s\\n\", kandidati[i].ime_prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nakon suzenja liste:\\nSara Sarac\\nFata Mujic\\nJozo Jozic\\nSuljo Suljic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2369,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Nema izbacivanja (Fata je porodica) *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {1, 3, 1978} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1979 } },\n    { \"Pero Peric\", { 1, 2, 1979 } },\n    { \"Sara Sarac\", { 2, 2, 1979 } },\n    { \"Fata Mujic\", { 1, 2, 1976 } },\n    { \"Jozo Jozic\", { 1, 10, 1980 } },\n    { \"Mijo Mijic\", { 4, 3, 1978 } },\n    { \"Suljo Suljic\", { 15, 1, 1982 } },\n};\n\nint novi_br = suzi_listu(kandidati, 7, direktor, 29);\nint i;\nprintf(\"Nakon suzenja liste:\\n\");\nfor (i=0; i<novi_br; i++)\n    printf(\"%s\\n\", kandidati[i].ime_prezime);\n\n\/* Ispravka za funkcije koje ne rade nista *\/\nkandidati[2].datum_rodjenja.godina = 1977;\nnovi_br = suzi_listu(kandidati, 7, direktor, 29);\nprintf(\"Novi broj: %d\\n\", novi_br);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nakon suzenja liste:\\nMeho Mehic\\nPero Peric\\nSara Sarac\\nFata Mujic\\nJozo Jozic\\nMijo Mijic\\nSuljo Suljic\\nNovi broj: 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2370,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Sve izbacujemo *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {3, 1, 1892} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1990 } },\n    { \"Pero Peric\", { 1, 2, 1990 } },\n    { \"Sara Sarac\", { 2, 2, 1990 } },\n    { \"Fata Mujicic\", { 1, 2, 1986 } },\n    { \"Jozo Jozic\", { 1, 10, 1990 } },\n    { \"Mijo Mijic\", { 4, 3, 1989 } },\n    { \"Suljo Suljic\", { 31, 12, 1991 } },\n};\n\nint novi_br = suzi_listu(kandidati, 7, direktor, 2);\nprintf(\"Novi broj: %d\\n\", novi_br);\ndirektor.datum_rodjenja.godina = 1992;\nnovi_br = suzi_listu(kandidati, 7, direktor, 2);\nprintf(\"Novi broj: %d\\n\", novi_br);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Novi broj: 7\\nNovi broj: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2371,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: 1900-ta godina nije bila prestupna *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {1, 3, 1900} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1900 } },\n    { \"Pero Peric\", { 1, 2, 1900 } },\n    { \"Sara Sarac\", { 2, 2, 1900 } },\n    { \"Fata Mujic\", { 1, 2, 1896 } },\n    { \"Jozo Jozic\", { 1, 10, 1900 } },\n    { \"Mijo Mijic\", { 4, 3, 1899 } },\n    { \"Suljo Suljic\", { 15, 1, 1902 } },\n};\n\nint novi_br = suzi_listu(kandidati, 7, direktor, 28);\nint i;\nprintf(\"Nakon suzenja liste:\\n\");\nfor (i=0; i<novi_br; i++)\n    printf(\"%s\\n\", kandidati[i].ime_prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nakon suzenja liste:\\nPero Peric\\nSara Sarac\\nFata Mujic\\nJozo Jozic\\nSuljo Suljic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2373,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Negativna razlika dana *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {1, 9, 1980} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1980 } },\n    { \"Pero Peric\", { 1, 2, 1980 } },\n    { \"Sara Sarac\", { 3, 10, 1980 } },\n    { \"Fata Mujic\", { 1, 2, 1976 } },\n    { \"Jozo Jozic\", { 2, 10, 1980 } },\n    { \"Mijo Mijic\", { 4, 3, 1979 } },\n    { \"Suljo Suljc\", { 15, 1, 1982 } },\n};\n\nint novi_br = suzi_listu(kandidati, 7, direktor, -31);\nint i;\nprintf(\"Nakon suzenja liste:\\n\");\nfor (i=0; i<novi_br; i++)\n    printf(\"%s\\n\", kandidati[i].ime_prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nakon suzenja liste:\\nSara Sarac\\nFata Mujic\\nJozo Jozic\\nSuljo Suljc"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2375,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT7: Negativna razlika dana, ne ostaje niko *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {1, 1, 1892} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1990 } },\n    { \"Pero Peric\", { 1, 2, 1990 } },\n    { \"Sara Sarac\", { 2, 10, 1990 } },\n    { \"Fata Mujicic\", { 10, 1, 1992 } },\n    { \"Jozo Jozic\", { 1, 10, 1990 } },\n    { \"Mijo Mijic\", { 4, 3, 1989 } },\n    { \"Suljo Suljc\", { 15, 1, 1992 } },\n};\nint novi_br = suzi_listu(kandidati, 7, direktor, -15);\nprintf(\"Novi broj: %d\\n\", novi_br);\ndirektor.datum_rodjenja.godina = 1992;\nnovi_br = suzi_listu(kandidati, 7, direktor, -15);\nprintf(\"Novi broj: %d\\n\", novi_br);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Novi broj: 7\\nNovi broj: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2376,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT8: Prazna lista kandidata *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {1, 1, 1980} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1990 } },\n    { \"Pero Peric\", { 1, 2, 1990 } },\n    { \"Sara Sarac\", { 2, 10, 1990 } },\n    { \"Fata Mujicic\", { 1, 2, 1986 } },\n    { \"Jozo Jozic\", { 1, 10, 1990 } },\n    { \"Mijo Mijic\", { 4, 3, 1979 } },\n    { \"Suljo Suljc\", { 15, 1, 1992 } },\n};\n\nint novi_br = suzi_listu(kandidati, 0, direktor, 15);\nint i;\nprintf(\"Novi broj: %d\\n\", novi_br);\n\n\/* Ispravka za funkcije koje ne rade nista *\/\nnovi_br = suzi_listu(kandidati, 7, direktor, 15);\nprintf(\"Novi broj: %d\\n\", novi_br);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Novi broj: 0\\nNovi broj: 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2378,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT10: Nova godina *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {3, 1, 1982} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 12, 1981 } },\n    { \"Pero Peric\", { 1, 2, 1980 } },\n    { \"Sara Sarac\", { 2, 2, 1980 } },\n    { \"Fata Mujicic\", { 1, 2, 1976 } },\n    { \"Jozo Jozic\", { 1, 1, 1982 } },\n    { \"Mijo Mijic\", { 4, 3, 1979 } },\n    { \"Suljo Suljic\", { 30, 12, 1981 } },\n};\n\n\/* Meho Mehic je za 3 dana stariji, a Suljo Suljic za 4 dana *\/\n\nint novi_br = suzi_listu(kandidati, 7, direktor, 3);\nint i;\nprintf(\"Nakon suzenja liste:\\n\");\nfor (i=0; i<novi_br; i++)\n    printf(\"%s\\n\", kandidati[i].ime_prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nakon suzenja liste:\\nMeho Mehic\\nJozo Jozic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2379,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT11: Varijante sa dva prezimena (samo direktor) *\/\nstruct Uposlenik direktor = {\"Mujo Mujic-Peric\", {3, 3, 1992} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1990 } },\n    { \"Pero Peric\", { 1, 2, 1990 } },\n    { \"Sara Sarac\", { 2, 2, 1990 } },\n    { \"Fata Mujic\", { 1, 2, 1986 } },\n    { \"Jozo Jozic\", { 1, 10, 1990 } },\n    { \"Mijo Mijic\", { 4, 3, 1989 } },\n    { \"Suljo Suljic\", { 31, 12, 1991 } },\n};\n\nint novi_br = suzi_listu(kandidati, 7, direktor, 3);\nint i;\nprintf(\"Nakon suzenja liste:\\n\");\nfor (i=0; i<novi_br; i++)\n    printf(\"%s\\n\", kandidati[i].ime_prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nakon suzenja liste:\\nPero Peric\\nFata Mujic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2380,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT12: Varijante sa dva prezimena (samo kandidati) *\/\nstruct Uposlenik direktor = {\"Mujo Mujic\", {3, 3, 1992} };\nstruct Uposlenik kandidati[7] = {\n    { \"Meho Mehic\", { 31, 1, 1990 } },\n    { \"Pero Peric\", { 1, 2, 1990 } },\n    { \"Sara Sarac\", { 2, 2, 1990 } },\n    { \"Fata Mujicic\", { 1, 2, 1986 } },\n    { \"Jozo Jozic-Mujic\", { 1, 10, 1990 } },\n    { \"Mijo Mujic-Mijic\", { 4, 3, 1989 } },\n    { \"Suljo Suljic\", { 31, 12, 1991 } },\n};\n\nint novi_br = suzi_listu(kandidati, 7, direktor, 3);\nint i;\nprintf(\"Nakon suzenja liste:\\n\");\nfor (i=0; i<novi_br; i++)\n    printf(\"%s\\n\", kandidati[i].ime_prezime);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nakon suzenja liste:\\nJozo Jozic-Mujic\\nMijo Mujic-Mijic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}
