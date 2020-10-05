@@ -1,0 +1,524 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-696.23.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "20": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite naziv poglavlja: \nKreirani indeks pojmova: \nabc: I/1/0, I/1/14, I/1/18\ndhi: I/1/22, I/1/35\nhrkw: I/1/30\nqwe: I/1/4, I/1/26\nstsda: I/1/8\n\nUnesite rijec: I/1/0 I/1/14 I/1/18 \nUnesite rijec: I/1/30 \nUnesite rijec: Unesena rijec nije nadjena!\nUnesite rijec: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "21": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite sadrzaj stranice 3: Unesite sadrzaj stranice 4: Unesite sadrzaj stranice 5: Unesite sadrzaj stranice 6: Unesite sadrzaj stranice 7: Unesite naziv poglavlja: \nKreirani indeks pojmova: \nabc: A/1/0, A/1/14, A/1/18, A/2/6, A/2/10\nasdfg: A/4/16\nb: A/3/0\ncdf: A/6/8\ncvb: A/6/12\ncxy: A/5/14\ndhi: A/1/22, A/1/35, A/2/14\ngfd: A/4/12\nghj: A/4/0, A/6/0\nhjzi: A/5/9\nhrkw: A/1/30\nkjh: A/4/4\nmng: A/5/5\npoi: A/4/8\npoiu: A/5/0\nqwe: A/1/4, A/1/26, A/6/16\nsdf: A/6/4\nstsda: A/1/8, A/2/0\n\nUnesite rijec: A/1/0 A/1/14 A/1/18 A/2/6 A/2/10 \nUnesite rijec: A/4/0 A/6/0 \nUnesite rijec: A/6/8 \nUnesite rijec: A/1/22 A/1/35 A/2/14 \nUnesite rijec: A/1/4 A/1/26 A/6/16 \nUnesite rijec: Unesena rijec nije nadjena!\nUnesite rijec: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "22": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite sadrzaj stranice 3: Unesite sadrzaj stranice 4: Unesite naziv poglavlja: \nKreirani indeks pojmova: \nabc: A/1/0, A/1/4, A/1/8, A/2/0, A/2/4, A/3/0, A/3/4\n\nUnesite rijec: A/1/0 A/1/4 A/1/8 A/2/0 A/2/4 A/3/0 A/3/4 \nUnesite rijec: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "23": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_23.cpp: In function ‘int main()’:\nbs_test_23.cpp:168:27: error: ‘set’ is not a member of ‘std’\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                           ^~~\nbs_test_23.cpp:168:27: error: ‘set’ is not a member of ‘std’\nbs_test_23.cpp:168:68: error: template argument 2 is invalid\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                    ^~\nbs_test_23.cpp:168:68: error: template argument 4 is invalid\nbs_test_23.cpp:168:70: error: expected unqualified-id before ‘>’ token\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                      ^\nbs_test_23.cpp:170:31: error: ‘ind’ was not declared in this scope\n         for (const auto &el : ind)\n                               ^~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_23.cpp:168:27: error: ‘set’ is not a member of ‘std’     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                           ^~~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_23.cpp:168:27: error: ‘set’ is not a member of ‘std’"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "68",
+                        "message": "template argument 2 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_23.cpp:168:68: error: template argument 2 is invalid     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                    ^~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "68",
+                        "message": "template argument 4 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_23.cpp:168:68: error: template argument 4 is invalid"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "70",
+                        "message": "expected unqualified-id before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_23.cpp:168:70: error: expected unqualified-id before ‘>’ token     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                      ^",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "31",
+                        "message": "'ind' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_23.cpp:170:31: error: ‘ind’ was not declared in this scope         for (const auto &el : ind)                               ^~~",
+                        "code": "for (const auto &el : ind)"
+                    }
+                ]
+            }
+        },
+        "24": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_24.cpp: In function ‘int main()’:\nbs_test_24.cpp:168:27: error: ‘set’ is not a member of ‘std’\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                           ^~~\nbs_test_24.cpp:168:27: error: ‘set’ is not a member of ‘std’\nbs_test_24.cpp:168:68: error: template argument 2 is invalid\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                    ^~\nbs_test_24.cpp:168:68: error: template argument 4 is invalid\nbs_test_24.cpp:168:70: error: expected unqualified-id before ‘>’ token\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                      ^\nbs_test_24.cpp:170:25: error: ‘ind’ was not declared in this scope\n     IspisiIndeksPojmova(ind);\n                         ^~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_24.cpp:168:27: error: ‘set’ is not a member of ‘std’     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                           ^~~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_24.cpp:168:27: error: ‘set’ is not a member of ‘std’"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "68",
+                        "message": "template argument 2 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_24.cpp:168:68: error: template argument 2 is invalid     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                    ^~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "68",
+                        "message": "template argument 4 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_24.cpp:168:68: error: template argument 4 is invalid"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "70",
+                        "message": "expected unqualified-id before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_24.cpp:168:70: error: expected unqualified-id before ‘>’ token     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                      ^",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "25",
+                        "message": "'ind' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_24.cpp:170:25: error: ‘ind’ was not declared in this scope     IspisiIndeksPojmova(ind);                         ^~~",
+                        "code": "IspisiIndeksPojmova(ind);"
+                    }
+                ]
+            }
+        },
+        "25": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_25.cpp: In function ‘int main()’:\nbs_test_25.cpp:168:27: error: ‘set’ is not a member of ‘std’\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                           ^~~\nbs_test_25.cpp:168:27: error: ‘set’ is not a member of ‘std’\nbs_test_25.cpp:168:68: error: template argument 2 is invalid\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                    ^~\nbs_test_25.cpp:168:68: error: template argument 4 is invalid\nbs_test_25.cpp:168:70: error: expected unqualified-id before ‘>’ token\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                      ^\nbs_test_25.cpp:170:5: error: ‘set’ is not a member of ‘std’\n     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n     ^~~\nbs_test_25.cpp:170:46: error: expected primary-expression before ‘>’ token\n     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n                                              ^~\nbs_test_25.cpp:170:49: error: ‘s’ was not declared in this scope\n     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n                                                 ^\nbs_test_25.cpp:170:82: error: ‘ind’ was not declared in this scope\n     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n                                                                                  ^~~\nbs_test_25.cpp:171:21: error: unable to deduce ‘auto&&’ from ‘s’\n     for (auto &el : s) std::cout << std::get<0>(el) << '/' << std::get<1>(el) << '/' << std::get<2>(el) << ' ';\n                     ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:168:27: error: ‘set’ is not a member of ‘std’     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                           ^~~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:168:27: error: ‘set’ is not a member of ‘std’"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "68",
+                        "message": "template argument 2 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:168:68: error: template argument 2 is invalid     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                    ^~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "68",
+                        "message": "template argument 4 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:168:68: error: template argument 4 is invalid"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "70",
+                        "message": "expected unqualified-id before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:168:70: error: expected unqualified-id before ‘>’ token     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                      ^",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "5",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:170:5: error: ‘set’ is not a member of ‘std’     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);     ^~~",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "46",
+                        "message": "expected primary-expression before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:170:46: error: expected primary-expression before ‘>’ token     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);                                              ^~",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "49",
+                        "message": "'s' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:170:49: error: ‘s’ was not declared in this scope     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);                                                 ^",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "82",
+                        "message": "'ind' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:170:82: error: ‘ind’ was not declared in this scope     std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);                                                                                  ^~~",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 18,
+                        "col": "21",
+                        "message": "unable to deduce 'auto&&' from 's'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_25.cpp:171:21: error: unable to deduce ‘auto&&’ from ‘s’     for (auto &el : s) std::cout << std::get<0>(el) << '/' << std::get<1>(el) << '/' << std::get<2>(el) << ' ';                     ^",
+                        "code": "for (auto &el : s) std::cout << std::get<0>(el) << '/' << std::get<1>(el) << '/' << std::get<2>(el) << ' ';"
+                    }
+                ]
+            }
+        },
+        "26": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_26.cpp: In function ‘int main()’:\nbs_test_26.cpp:156:27: error: ‘set’ is not a member of ‘std’\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                           ^~~\nbs_test_26.cpp:156:27: error: ‘set’ is not a member of ‘std’\nbs_test_26.cpp:156:68: error: template argument 2 is invalid\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                    ^~\nbs_test_26.cpp:156:68: error: template argument 4 is invalid\nbs_test_26.cpp:156:70: error: expected unqualified-id before ‘>’ token\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                      ^\nbs_test_26.cpp:158:18: error: ‘ind’ was not declared in this scope\n     std::cout << ind.size();\n                  ^~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_26.cpp:156:27: error: ‘set’ is not a member of ‘std’     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                           ^~~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_26.cpp:156:27: error: ‘set’ is not a member of ‘std’"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "68",
+                        "message": "template argument 2 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_26.cpp:156:68: error: template argument 2 is invalid     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                    ^~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "68",
+                        "message": "template argument 4 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_26.cpp:156:68: error: template argument 4 is invalid"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "70",
+                        "message": "expected unqualified-id before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_26.cpp:156:70: error: expected unqualified-id before ‘>’ token     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                      ^",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "18",
+                        "message": "'ind' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_26.cpp:158:18: error: ‘ind’ was not declared in this scope     std::cout << ind.size();                  ^~~",
+                        "code": "std::cout << ind.size();"
+                    }
+                ]
+            }
+        },
+        "27": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_27.cpp: In function ‘int main()’:\nbs_test_27.cpp:156:27: error: ‘set’ is not a member of ‘std’\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                           ^~~\nbs_test_27.cpp:156:27: error: ‘set’ is not a member of ‘std’\nbs_test_27.cpp:156:68: error: template argument 2 is invalid\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                    ^~\nbs_test_27.cpp:156:68: error: template argument 4 is invalid\nbs_test_27.cpp:156:70: error: expected unqualified-id before ‘>’ token\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                      ^\nbs_test_27.cpp:159:25: error: ‘ind’ was not declared in this scope\n     IspisiIndeksPojmova(ind);\n                         ^~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_27.cpp:156:27: error: ‘set’ is not a member of ‘std’     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                           ^~~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_27.cpp:156:27: error: ‘set’ is not a member of ‘std’"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "68",
+                        "message": "template argument 2 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_27.cpp:156:68: error: template argument 2 is invalid     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                    ^~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "68",
+                        "message": "template argument 4 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_27.cpp:156:68: error: template argument 4 is invalid"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "70",
+                        "message": "expected unqualified-id before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_27.cpp:156:70: error: expected unqualified-id before ‘>’ token     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                      ^",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "25",
+                        "message": "'ind' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_27.cpp:159:25: error: ‘ind’ was not declared in this scope     IspisiIndeksPojmova(ind);                         ^~~",
+                        "code": "IspisiIndeksPojmova(ind);"
+                    }
+                ]
+            }
+        },
+        "28": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_28.cpp: In function ‘int main()’:\nbs_test_28.cpp:156:27: error: ‘set’ is not a member of ‘std’\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                           ^~~\nbs_test_28.cpp:156:27: error: ‘set’ is not a member of ‘std’\nbs_test_28.cpp:156:68: error: template argument 2 is invalid\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                    ^~\nbs_test_28.cpp:156:68: error: template argument 4 is invalid\nbs_test_28.cpp:156:70: error: expected unqualified-id before ‘>’ token\n     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n                                                                      ^\nbs_test_28.cpp:160:9: error: ‘set’ is not a member of ‘std’\n         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n         ^~~\nbs_test_28.cpp:160:50: error: expected primary-expression before ‘>’ token\n         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n                                                  ^~\nbs_test_28.cpp:160:53: error: ‘s’ was not declared in this scope\n         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n                                                     ^\nbs_test_28.cpp:160:86: error: ‘ind’ was not declared in this scope\n         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n                                                                                      ^~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:156:27: error: ‘set’ is not a member of ‘std’     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                           ^~~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "27",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:156:27: error: ‘set’ is not a member of ‘std’"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "68",
+                        "message": "template argument 2 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:156:68: error: template argument 2 is invalid     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                    ^~",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "68",
+                        "message": "template argument 4 is invalid",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:156:68: error: template argument 4 is invalid"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "70",
+                        "message": "expected unqualified-id before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:156:70: error: expected unqualified-id before ‘>’ token     std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));                                                                      ^",
+                        "code": "std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "9",
+                        "message": "'set' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:160:9: error: ‘set’ is not a member of ‘std’         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);         ^~~",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "50",
+                        "message": "expected primary-expression before '>' token",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:160:50: error: expected primary-expression before ‘>’ token         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);                                                  ^~",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "53",
+                        "message": "'s' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:160:53: error: ‘s’ was not declared in this scope         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);                                                     ^",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "86",
+                        "message": "'ind' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_2080/bs_test_28.cpp:160:86: error: ‘ind’ was not declared in this scope         std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);                                                                                      ^~~",
+                        "code": "std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);"
+                    }
+                ]
+            }
+        },
+        "29": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 5,
+    "time": 1527546890
+}

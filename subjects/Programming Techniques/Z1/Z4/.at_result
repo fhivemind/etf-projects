@@ -1,0 +1,105 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-696.10.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "18": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Danas je lijeppejil i suncannacnus dan\nRecenica nakon PoluPalindrom transformacije: Danas je lijil i sunnus dan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "19": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Izasla je prva zadacaacadaz iz predmeta Tehnike programiranjaajnarimargorp ekinheT, a ovih dana ocekujemo i jos zadacaacadaz iz drugih predmetaatemderp higurd\nRecenica nakon PoluPalindrom transformacije: Izasla je prva zaddaz iz predmeta Tehnike prorp ekinheT, a ovih dana ocekujemo i jos zaddaz iz drugih p higurd\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "20": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Danas je lijep dan\nRecenica nakon PoluPalindrom transformacije: Danas je lijep dan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "21": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije:  \nRecenica nakon PoluPalindrom transformacije:  \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "22": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Danas je dannad danassanad je lijep i suncan dannad\nRecenica nakon PoluPalindrom transformacije: Danas je dad danad je lijep i suncan dad\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "23": {
+            "status": 1,
+            "run_result": {
+                "output": "dannad danas dannad Dan dannad danas\ndad danas dad Dan dad danas\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1522346471
+}

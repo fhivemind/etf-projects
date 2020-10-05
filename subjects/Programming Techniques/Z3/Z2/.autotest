@@ -1,0 +1,273 @@
+{
+    "id": 5492,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 3, zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 20,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - test iz postavke zadatka\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "I\nabc qwe stsda abc abc dhi qwe hrkw dhi\n.\n.\nabc\nhrkw\nxyzzy\n.\n"
+            },
+            "expected": [
+                "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite naziv poglavlja: \\nKreirani indeks pojmova:\\nabc: I\/1\/0, I\/1\/14, I\/1\/18\\ndhi: I\/1\/22, I\/1\/35\\nhrkw: I\/1\/30\\nqwe: I\/1\/4, I\/1\/26\\nstsda: I\/1\/8\\nUnesite rijec: I\/1\/0 I\/1\/14 I\/1\/18 \\nUnesite rijec: I\/1\/30 \\nUnesite rijec: Unesena rijec nije nadjena!\\nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 21,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - test studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "A\nabc qwe stsda abc abc dhi qwe hrkw dhi\nstsda abc abc dhi\nB\nghj kjh poi gfd asdfg\npoiu mng hjzi cxy\nghj sdf cdf cvb qwe\n.\n.\nabc\nghj\ncdf\ndhi\nqwe\nxyzzy\n."
+            },
+            "expected": [
+                "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite sadrzaj stranice 3: Unesite sadrzaj stranice 4: Unesite sadrzaj stranice 5: Unesite sadrzaj stranice 6: Unesite sadrzaj stranice 7: Unesite naziv poglavlja: \\nKreirani indeks pojmova:\\nabc: A\/1\/0, A\/1\/14, A\/1\/18, A\/2\/6, A\/2\/10\\nasdfg: A\/4\/16\\nb: A\/3\/0\\ncdf: A\/6\/8\\ncvb: A\/6\/12\\ncxy: A\/5\/14\\ndhi: A\/1\/22, A\/1\/35, A\/2\/14\\ngfd: A\/4\/12\\nghj: A\/4\/0, A\/6\/0\\nhjzi: A\/5\/9\\nhrkw: A\/1\/30\\nkjh: A\/4\/4\\nmng: A\/5\/5\\npoi: A\/4\/8\\npoiu: A\/5\/0\\nqwe: A\/1\/4, A\/1\/26, A\/6\/16\\nsdf: A\/6\/4\\nstsda: A\/1\/8, A\/2\/0\\nUnesite rijec: A\/1\/0 A\/1\/14 A\/1\/18 A\/2\/6 A\/2\/10 \\nUnesite rijec: A\/4\/0 A\/6\/0 \\nUnesite rijec: A\/6\/8 \\nUnesite rijec: A\/1\/22 A\/1\/35 A\/2\/14 \\nUnesite rijec: A\/1\/4 A\/1\/26 A\/6\/16 \\nUnesite rijec: Unesena rijec nije nadjena!\\nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 22,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - test studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "A\nabc ABC abC\nABc aBc\nabc aBC\n.\n.\nabc\n.\n\n\n"
+            },
+            "expected": [
+                "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite sadrzaj stranice 3: Unesite sadrzaj stranice 4: Unesite naziv poglavlja: \\nKreirani indeks pojmova:\\nabc: A\/1\/0, A\/1\/4, A\/1\/8, A\/2\/0, A\/2\/4, A\/3\/0, A\/3\/4\\nUnesite rijec: A\/1\/0 A\/1\/4 A\/1\/8 A\/2\/0 A\/2\/4 A\/3\/0 A\/3\/4 \\nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 23,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/Test funkcije KreirajIndeksPojmova\n    std::map<std::string, std::vector<std::string>> k;\n    k[\"A\"].push_back(\"abc\");\n    k[\"A\"].push_back(\"abcd\");\n    k[\"A\"].push_back(\"ABc\");\n    k[\"A\"].push_back(\"aBC\");\n    k[\"A\"].push_back(\"qwe\");\n    k[\"A\"].push_back(\"qwer\");\n    k[\"B\"].push_back(\"abc\");\n    k[\"B\"].push_back(\"abcd\");\n    k[\"B\"].push_back(\"ABc\");\n    k[\"C\"].push_back(\"aBC\");\n    k[\"C\"].push_back(\"qwe\");\n    k[\"C\"].push_back(\"qwer\");\n    std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n    \n        for (const auto &el : ind)\n    {\n        std::cout << '\\n' << el.first << \": \";\n        for (auto it(el.second.begin()); it != el.second.end(); it++)\n            std::cout << (it != el.second.begin() ? \", \" : \"\") << std::get<0>(*it) << '\/' << std::get<1>(*it) << '\/' << std::get<2>(*it);\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc: A\/1\/0, A\/3\/0, A\/4\/0, B\/1\/0, B\/3\/0, C\/1\/0\\nabcd: A\/2\/0, B\/2\/0\\nqwe: A\/5\/0, C\/2\/0\\nqwer: A\/6\/0, C\/3\/0",
+                "abc: A\/1\/0, A\/3\/0, A\/4\/0, B\/7\/0, B\/9\/0, C\/10\/0\\nabcd: A\/2\/0, B\/8\/0\\nqwe: A\/5\/0, C\/11\/0\\nqwer: A\/6\/0, C\/12\/0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 24,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/Test funkcije IspisiIndeksPojmova\n    std::map<std::string, std::vector<std::string>> k;\n    k[\"A\"].push_back(\"abc\");\n    k[\"A\"].push_back(\"abcd\");\n    k[\"A\"].push_back(\"ABc\");\n    k[\"A\"].push_back(\"aBC\");\n    k[\"A\"].push_back(\"qwe\");\n    k[\"A\"].push_back(\"qwer\");\n    k[\"B\"].push_back(\"abc\");\n    k[\"B\"].push_back(\"abcd\");\n    k[\"B\"].push_back(\"ABc\");\n    k[\"C\"].push_back(\"aBC\");\n    k[\"C\"].push_back(\"qwe\");\n    k[\"C\"].push_back(\"qwer\");\n    std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n    \n    IspisiIndeksPojmova(ind);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc: A\/1\/0, A\/3\/0, A\/4\/0, B\/1\/0, B\/3\/0, C\/1\/0\\nabcd: A\/2\/0, B\/2\/0\\nqwe: A\/5\/0, C\/2\/0\\nqwer: A\/6\/0, C\/3\/0",
+                "abc: A\/1\/0, A\/3\/0, A\/4\/0, B\/7\/0, B\/9\/0, C\/10\/0\\nabcd: A\/2\/0, B\/8\/0\\nqwe: A\/5\/0, C\/11\/0\\nqwer: A\/6\/0, C\/12\/0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 25,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/Test funkcije PretraziIndeksPojmova\n    std::map<std::string, std::vector<std::string>> k;\n    k[\"A\"].push_back(\"abc\");\n    k[\"A\"].push_back(\"abcd\");\n    k[\"A\"].push_back(\"ABc\");\n    k[\"A\"].push_back(\"aBC\");\n    k[\"A\"].push_back(\"qwe\");\n    k[\"A\"].push_back(\"qwer\");\n    k[\"B\"].push_back(\"abc\");\n    k[\"B\"].push_back(\"abcd\");\n    k[\"B\"].push_back(\"ABc\");\n    k[\"C\"].push_back(\"aBC\");\n    k[\"C\"].push_back(\"qwe\");\n    k[\"C\"].push_back(\"qwer\");\n    std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n    \n    std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n    for (auto &el : s) std::cout << std::get<0>(el) << '\/' << std::get<1>(el) << '\/' << std::get<2>(el) << ' ';",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "A\/1\/0 A\/3\/0 A\/4\/0 B\/1\/0 B\/3\/0 C\/1\/0 ",
+                "A\/1\/0 A\/3\/0 A\/4\/0 B\/7\/0 B\/9\/0 C\/10\/0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 26,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/Test funkcije KreirajIndeksPojmova - prazan\n    std::map<std::string, std::vector<std::string>> k;\n    std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n    \n    std::cout << ind.size();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 27,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/Test funkcije IspisiIndeksPojmova - prazan\n    std::map<std::string, std::vector<std::string>> k;\n    std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n    \n    std::cout << \"Pocetak.\";\n    IspisiIndeksPojmova(ind);\n    std::cout << \"Kraj.\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pocetak.Kraj."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 28,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/Test funkcije PretraziIndeksPojmova - izuzetak\n    std::map<std::string, std::vector<std::string>> k;\n    std::map<std::string, std::set<std::tuple<std::string, int, int>>> ind(KreirajIndeksPojmova(k));\n    \n    try\n    {\n        std::set<std::tuple<std::string, int, int>> s = PretraziIndeksPojmova(\"abc\", ind);\n        std::cout << \"Ovo se ne smije ispisati.\";\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Pojam nije nadjen",
+                "Izuzetak: Unesena rijec nije nadjena!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 29,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/Test da li je tip Knjiga definiran dobro\n    \/\/Ako se program kompajlira, onda jeste\n    Knjiga k;\n    std::cout << \"OK\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

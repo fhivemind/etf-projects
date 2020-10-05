@@ -1,0 +1,169 @@
+{
+    "id": 5484,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 1, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 18,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - oficijelni autotest koji predstavlja formalni ulaz\/izlaz za ovaj zadatak\n  \/\/Kraj fraze ozna\u010dava se prelaskom u novi red.\n  \/\/Kraj unosa fraza zavr\u0161ava se dvostrukim prelaskom u novi red.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Danas je lijep i suncan dan\ndanas\nlijep\nsuncan\n\n"
+            },
+            "expected": [
+                "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Danas je lijeppejil i suncannacnus dan\\nRecenica nakon PoluPalindrom transformacije: Danas je lijil i sunnus dan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 19,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Izasla je prva zadaca iz predmeta Tehnike programiranja, a ovih dana ocekujemo i jos zadaca iz drugih predmeta\nzadaca\nTehnike programiranja\ndrugih predmeta\nmeso od sira\n\n"
+            },
+            "expected": [
+                "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Izasla je prva zadacaacadaz iz predmeta Tehnike programiranjaajnarimargorp ekinheT, a ovih dana ocekujemo i jos zadacaacadaz iz drugih predmetaatemderp higurd\\nRecenica nakon PoluPalindrom transformacije: Izasla je prva zaddaz iz predmeta Tehnike prorp ekinheT, a ovih dana ocekujemo i jos zaddaz iz drugih p higurd"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 20,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - situacija kada se ne unesu fraze\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Danas je lijep dan\n\n"
+            },
+            "expected": [
+                "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Danas je lijep dan\\nRecenica nakon PoluPalindrom transformacije: Danas je lijep dan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 21,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - situacija kada se ne unese recenica\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": " \nDanas\nje\nlijep\n\n"
+            },
+            "expected": [
+                "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: \\nRecenica nakon PoluPalindrom transformacije: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 22,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 - main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Danas je dan danas je lijep i suncan dan\ndanas\ndan\n\n"
+            },
+            "expected": [
+                "Unesite recenicu: Unesite fraze: Recenica nakon Palindrom transformacije: Danas je dannad danassanad je lijep i suncan dannad\\nRecenica nakon PoluPalindrom transformacije: Danas je dad danad je lijep i suncan dad"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 23,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 - ne trebaju se mijenjati dijelovi rije\u010di, samo cijele rije\u010di\n\nstd::string s{\"dan danas dan Dan dan danas\"};\nstd::vector<std::string> v{\"dan\"};\n\nstd::cout << NapraviPalindrom(s,v) << std::endl << NapraviPoluPalindrom(s,v) << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "dannad danas dannad Dan dannad danas\\ndad danas dad Dan dad danas\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

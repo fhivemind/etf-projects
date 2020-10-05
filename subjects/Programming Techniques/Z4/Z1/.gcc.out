@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/TP/Z4/Z1/main.cpp: In function ‘int main()’:
+/rhome/r/rpolic1/workspace/TP/Z4/Z1/main.cpp:224:13: warning: unused variable ‘znak’ [-Wunused-variable]
+         int znak = 1;
+             ^

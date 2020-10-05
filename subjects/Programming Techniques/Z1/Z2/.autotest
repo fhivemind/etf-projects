@@ -1,0 +1,169 @@
+{
+    "id": 5482,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 1, zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 17,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - primjer iz postavke\n\/\/Ispis je na 6 mjesta sirine\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6 6 0 0 0 15 12 6 1 25 1 5 2 9 1 1 20 15 10 5 3 2 19 130 14 8 90 6 20 12 17 2 12 3 5 1 8 4\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m i n): Unesite elemente matrice:\\nNajveca planina unesene matrice je:\\n    25     1     5     2     9\\n     1    20    15    10     5\\n     2    19   130    14     8\\n     6    20    12    17     2\\n     3     5     1     8     4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 18,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - main: za negativno unesene dimenzije treba ispisati gre\u0161ku\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-5 1\n\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m i n): Dimenzije matrice moraju biti nenegativne!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 19,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 4 0 0 0 15 1 25 1 5 1 1 20 15\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m i n): Unesite elemente matrice:\\nNajveca planina unesene matrice je:\\n     0     0     0\\n     1    25     1\\n     1     1    20\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 20,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - bacanje izuzetka iz funkcije u slu\u010daju grbave matrice\n\ntry\n{\n\tstd::vector<std::vector<double>> m{{1, 2, 3}, {4, 5, 6}, {7, 8}};\n\tNajvecaPlaninaMatrice(m);\n}\ncatch (const std::domain_error &e)\n{\n\tstd::cout << \"Izuzetak: \" << e.what() << std::endl;\n}\ncatch(...)\n{\n\tstd::cout << \"Pogre\u0161an izuzetak!\";\n}\n\n\ntry\n{\n\tstd::vector<std::vector<double>> m{{1, 2}, {4, 5, 6}, {7, 8}};\n\tNajvecaPlaninaMatrice(m);\n}\ncatch (const std::domain_error &e)\n{\n\tstd::cout << \"Izuzetak: \" << e.what() << std::endl;\n}\ncatch(...)\n{\n\tstd::cout << \"Pogre\u0161an izuzetak!\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Matrica nije korektna\\nIzuzetak: Matrica nije korektna\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 21,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 1 24"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m i n): Unesite elemente matrice:\\nNajveca planina unesene matrice je:\\n    24\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 22,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 - main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2 1 2 3 4\n"
+            },
+            "expected": [
+                "Unesite dimenzije matrice (m i n): Unesite elemente matrice:\\nNajveca planina unesene matrice je:\\n     4\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

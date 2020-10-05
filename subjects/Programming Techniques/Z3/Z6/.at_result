@@ -1,0 +1,294 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-696.23.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "145": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 46 karata, i to: \nPik: 2 3 4 5 6 7 8 10 J Q A \nTref: 2 3 4 5 6 7 8 10 J K A \nHerc: 2 3 4 5 6 7 8 9 10 Q K A \nKaro: 2 3 4 5 6 7 8 9 J Q K A \nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 50 karata, i to: \nPik: 2 3 4 5 6 7 8 9 10 J Q A \nTref: 2 3 4 5 6 7 8 9 10 J K A \nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \nKaro: 2 3 4 5 6 7 8 9 10 J Q K A ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "146": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 46 karata, i to: \nPik: 2 3 4 5 6 7 8 10 J Q A \nTref: 2 3 4 5 6 7 8 10 J K A \nHerc: 2 3 4 5 6 7 8 9 10 Q K A \nKaro: 2 3 4 5 6 7 8 9 J Q K A \nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 52 karata, i to: \nPik: 2 3 4 5 6 7 8 9 10 J Q K A \nTref: 2 3 4 5 6 7 8 9 10 J Q K A \nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \nKaro: 2 3 4 5 6 7 8 9 10 J Q K A ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "147": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 48 karata, i to: \nPik: 2 3 4 5 6 7 8 9 10 J Q K \nTref: 2 3 4 5 6 7 8 9 10 J Q K \nHerc: 2 3 4 5 6 7 8 9 10 J Q K \nKaro: 2 3 4 5 6 7 8 9 10 J Q K \nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 48 karata, i to: \nPik: 2 3 4 5 6 7 8 9 10 J Q K \nTref: 2 3 4 5 6 7 8 9 10 J Q K \nHerc: 2 3 4 5 6 7 8 9 10 J Q K \nKaro: 2 3 4 5 6 7 8 9 10 J Q K ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "148": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 26 karata, i to: \nPik: 2 4 6 8 10 Q A \nTref: 3 5 7 9 J K \nHerc: 2 4 6 8 10 Q A \nKaro: 3 5 7 9 J K \nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 39 karata, i to: \nPik: 2 4 6 8 10 Q A \nTref: 3 5 7 9 J K \nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \nKaro: 2 3 4 5 6 7 8 9 10 J Q K A ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "149": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: Izuzetak: Neispravni elementi za izbacivanje!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "150": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: Izuzetak: Neispravni elementi za izbacivanje!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "151": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 48 karata, i to: \nPik: 2 3 4 5 6 7 8 9 10 J Q K \nTref: 2 3 4 5 6 7 8 9 10 J Q K \nHerc: 2 3 4 5 6 7 8 9 10 J Q K \nKaro: 2 3 4 5 6 7 8 9 10 J Q K \nUnesite broj karata koje zelite vratiti u spil: Izuzetak: Nedovoljno karata u steku!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "152": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 48 karata, i to: \nPik: 2 3 4 5 6 7 8 9 10 Q K A \nTref: 2 3 4 5 6 7 9 10 J Q K A \nHerc: 2 3 4 6 7 8 9 10 J Q K A \nKaro: 3 4 5 6 7 8 9 10 J Q K A \nUnesite broj karata koje zelite vratiti u spil: Izuzetak: Broj n je besmislen!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "153": {
+            "status": 1,
+            "run_result": {
+                "output": "Pik: 2 3 4 5 6 7 8 9 10 J Q K A\nTref: 2 3 4 5 6 7 8 9 10 J Q K A\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A\n1 2",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "154": {
+            "status": 1,
+            "run_result": {
+                "output": "Pik: 2 3 4 5 6 8 9 10 J Q A \nTref: 2 3 4 5 7 8 9 10 J K A \nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "155": {
+            "status": 1,
+            "run_result": {
+                "output": "Tref Q\nTref 6\nPik K\nPik 7\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "156": {
+            "status": 1,
+            "run_result": {
+                "output": "Pik: 2 3 4 5 6 8 9 10 J Q A \nTref: 2 3 4 5 6 7 8 9 10 J Q K A \nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "157": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_157.cpp: In function ‘int main()’:\nbs_test_157.cpp:293:22: error: ‘b’ was not declared in this scope\n     short int a {6}; b{4};\n                      ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "22",
+                        "message": "'b' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_948/bs_test_157.cpp:293:22: error: ‘b’ was not declared in this scope     short int a {6}; b{4};                      ^",
+                        "code": "short int a {6}; b{4};"
+                    }
+                ]
+            }
+        },
+        "158": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_158.cpp: In function ‘int main()’:\nbs_test_158.cpp:294:21: error: ‘b’ was not declared in this scope\n     short int a{4}; b{52};\n                     ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "21",
+                        "message": "'b' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_948/bs_test_158.cpp:294:21: error: ‘b’ was not declared in this scope     short int a{4}; b{52};                     ^",
+                        "code": "short int a{4}; b{52};"
+                    }
+                ]
+            }
+        },
+        "159": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_159.cpp: In function ‘int main()’:\nbs_test_159.cpp:307:25: error: ‘b’ was not declared in this scope\n         short int a{4}; b{2};\n                         ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "25",
+                        "message": "'b' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_948/bs_test_159.cpp:307:25: error: ‘b’ was not declared in this scope         short int a{4}; b{2};                         ^",
+                        "code": "short int a{4}; b{2};"
+                    }
+                ]
+            }
+        },
+        "160": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_160.cpp: In function ‘int main()’:\nbs_test_160.cpp:292:21: error: ‘b’ was not declared in this scope\n     short int a{4}; b{51};\n                     ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "21",
+                        "message": "'b' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_948/bs_test_160.cpp:292:21: error: ‘b’ was not declared in this scope     short int a{4}; b{51};                     ^",
+                        "code": "short int a{4}; b{51};"
+                    }
+                ]
+            }
+        },
+        "161": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_161.cpp: In function ‘int main()’:\nbs_test_161.cpp:342:21: error: ‘b’ was not declared in this scope\n     short int a{4}; b{52};\n                     ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 24,
+                        "col": "21",
+                        "message": "'b' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_948/bs_test_161.cpp:342:21: error: ‘b’ was not declared in this scope     short int a{4}; b{52};                     ^",
+                        "code": "short int a{4}; b{52};"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1527711551
+}

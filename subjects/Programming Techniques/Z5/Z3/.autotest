@@ -1,0 +1,169 @@
+{
+    "id": 5534,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 5, zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 43,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testove pisao Dino \u0160atrovi\u0107\n\/\/Sva evenutalna pitanja u vezi testova mo\u017eete postaviti na forumu\n\/\/za zadace na courseware-u predmeta\n\n    {\/\/AT1 konstruktor (javni)\n        try {\n            Datum d(29, Datum::Februar, 1900);\n        }\n        catch(std::domain_error &ex){\n            std::cout << ex.what() << std::endl;\n        }\n        Datum d(1,2,2001);\n        std::cout << d.DajDan() << \" \" << d.DajMjesec() << \" \" << d.DajGodinu() << std::endl;\n        try{\n            Datum d(1,2,1799);\n        }\n        catch(std::domain_error &ex){\n            std::cout << ex.what() << std::endl;\n        }\n       \n        Datum d3(1, Datum::Januar, 1900);\n        std::cout << d3.DajDan() << \" \" << d3.DajMjesec() << \" \" << d3.DajGodinu() << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nelegalan datum\\n1 2 2001\\nNelegalan datum\\n1 1 1900"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 44,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT3 (javni) ++ -- += operatori, DajImeMjeseca, DajImeDanaUSedmici\n        Datum d(3,1,2010);\n        d++;\n        std::cout<<d.DajDan()<<\" \"<<d.DajImeMjeseca()<<\" \"<<d.DajGodinu()<<\" \"<<d.DajImeDanaUSedmici()<<\" \";\n        d+=4;\n        std::cout<<d.DajDan()<<\" \"<<d.DajImeMjeseca()<<\" \"<<d.DajGodinu()<<\" \"<<d.DajImeDanaUSedmici()<<\" \";\n        d--;\n        --d;\n        std::cout<<d.DajDan()<<\" \"<<d.DajImeMjeseca()<<\" \"<<d.DajGodinu()<<\" \"<<d.DajImeDanaUSedmici() << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4 Januar 2010 Ponedjeljak 8 Januar 2010 Petak 6 Januar 2010 Srijeda\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 45,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT4 (javni) ++ -- operatori, << operator\n        Datum d(28,2,2008);\n        std::cout << d++ << \" \";\n        std::cout << ++d << \" \";\n        std::cout << --d << \" \";\n        std::cout << d-- << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "28. Februar 2008. (Cetvrtak) 1. Mart 2008. (Subota) 29. Februar 2008. (Petak) 29. Februar 2008. (Petak)\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 46,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT7 (javni)  += -= operatori\n        Datum d(1,2,2018);\n        d+= 30;\n        std::cout << d << std::endl;\n        d-=30;\n        std::cout << d << std::endl;\n        d+=365;\n        std::cout << d << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3. Mart 2018. (Subota)\\n1. Februar 2018. (Cetvrtak)\\n1. Februar 2019. (Petak)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 47,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT9 (javni) operatori == != < > >= >=\n        Datum d1(31,12,2008);\n        Datum d2(d1);\n        if ((d2==d1) && !(d2!=d1) && !(d2<d1) && !(d2>d1) && (d2<=d1) && (d2>=d1)) std::cout<<\"OK1 \";\n        d2++;\n        if (!(d2==d1) && (d2!=d1) && !(d2<d1) && (d2>d1) && !(d2<=d1) && (d2>=d1))\n            std::cout<<\"OK2 \";\n        if (!(d1==d2) && (d1!=d2) && (d1<d2) && !(d1>d2) && (d1<=d2) && !(d1>=d2))\n            std::cout<<\"OK3\";\n        std::cout << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK1 OK2 OK3\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 48,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    {\/\/AT12 (javni) string operator\n        Datum d(1,2,2018);\n        std::string s = d;\n        Datum d2(31,5,2018);\n\n        std::cout << s << std::endl << std::string(d2) << std::endl;\n\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1. Februar 2018. (Cetvrtak)\\n31. Maj 2018. (Cetvrtak)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+/rhome/r/rpolic1/workspace/TP/T12/Z3/main.cpp:6:20: warning: ‘mjeseci’ defined but not used [-Wunused-variable]
+ static const char* mjeseci[12] = {"Ponedjeljak","Utorak","Srijeda", "Cetvrtak", "Petak", "Subota", "Nedjelja"};
+                    ^

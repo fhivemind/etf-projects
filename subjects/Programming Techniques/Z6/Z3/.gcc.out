@@ -1,0 +1,22 @@
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(int, int, char) [with TipEl = int]’:
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:452:29:   required from here
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:15:10: warning: ‘Matrica<int>::ime_matrice’ will be initialized after [-Wreorder]
+     char ime_matrice;
+          ^
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:14:13: warning:   ‘int** Matrica<int>::elementi’ [-Wreorder]
+     TipEl **elementi;
+             ^
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:99:1: warning:   when initialized here [-Wreorder]
+ Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime)
+ ^
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp: In instantiation of ‘Matrica<TipEl>::Matrica(const string&, bool) [with TipEl = int; std::string = std::basic_string<char>]’:
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:457:45:   required from here
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:14:13: warning: ‘Matrica<int>::elementi’ will be initialized after [-Wreorder]
+     TipEl **elementi;
+             ^
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:13:9: warning:   ‘int Matrica<int>::br_redova’ [-Wreorder]
+     int br_redova, br_kolona;
+         ^
+/rhome/r/rpolic1/workspace/TP/Z6/Z3/main.cpp:441:1: warning:   when initialized here [-Wreorder]
+ Matrica<T>::Matrica(const std::string& datoteka, bool is_binary) : elementi(nullptr), br_redova(0), br_kolona(0), ime_matrice(0) {
+ ^

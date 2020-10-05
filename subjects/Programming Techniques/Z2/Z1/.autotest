@@ -1,0 +1,194 @@
+{
+    "id": 5485,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 2, zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/\/AT1 (c9) - funkcija KreirajIgru\n    std::vector<std::vector<int>> mine = {{0,2}, {1,3}, {1,5}, {4,2}, {5,1}, {5,5}} ;\n    std::vector<std::vector<Polje>> tabla = KreirajIgru(6, mine);\n    ispisiTablu(tabla);",
+            "global_above_main": "void ispisiTablu(std::vector<std::vector<Polje>> polja){\n   for(int i = 0; i < polja.size(); i++) {\n          for(int j = 0; j < polja[i].size(); j++) std::cout << int(polja[i][j]) << \" \";\n          std::cout << std::endl;\n        }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 2 0 0 0 \\n0 0 0 2 0 2 \\n0 0 0 0 0 0 \\n0 0 0 0 0 0 \\n0 0 2 0 0 0 \\n0 2 0 0 0 2 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 (c9) - funkcija Okolina primjer iz postavke\n    std::vector<std::vector<int>> mine = {{0,1}, {0,4}, {1,3}, {1,4}, {2,0}, {2,1}, {2,3}} ;\n    std::vector<std::vector<Polje>> tabla = KreirajIgru(5, mine);\n    std::vector<std::vector<int>> okolina = PrikaziOkolinu(tabla, 1, 1);\n    for(int i = 0; i < okolina.size(); i++)\n    {\n      for(int j = 0; j < okolina[i].size(); j++) std::cout << okolina[i][j] << \" \";\n      std::cout << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 0 2 \\n3 3 4 \\n1 1 3\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 (c9) - funkcija blokiraj i deblokiraj polje \n    std::vector<std::vector<int>> mine = {{0,2}, {1,3}, {1,5}, {4,2}, {5,1}, {5,5}} ;\n    std::vector<std::vector<Polje>> tabla = KreirajIgru(6, mine);\n    BlokirajPolje(tabla, 1,3);\n    BlokirajPolje(tabla, 1,4);\n    BlokirajPolje(tabla, 0,2);\n    BlokirajPolje(tabla, 0,3);\n    DeblokirajPolje(tabla, 0,2);\n    DeblokirajPolje(tabla, 0,3);\n    ispisiTablu(tabla);",
+            "global_above_main": "void ispisiTablu(std::vector<std::vector<Polje>> polja){\n   for(int i = 0; i < polja.size(); i++) {\n          for(int j = 0; j < polja[i].size(); j++) std::cout << int(polja[i][j]) << \" \";\n          std::cout << std::endl;\n        }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 2 0 0 0 \\n0 0 0 5 3 2 \\n0 0 0 0 0 0 \\n0 0 0 0 0 0 \\n0 0 2 0 0 0 \\n0 2 0 0 0 2\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 (c9) - funkcija idi sa 4 parametara\n    std::vector<std::vector<int>> mine = {{0,2}, {1,3}, {1,5}, {4,2}, {5,1}, {5,5}} ;\n    std::vector<std::vector<Polje>> tabla = KreirajIgru(6, mine);\n  int x = 0, y = 0;\n  Idi(tabla, x, y, Smjerovi::DoljeDesno);\n  std::cout << x << \" \" << y << std::endl;\n  Idi(tabla, x, y, Smjerovi::Dolje);\n  std::cout << x << \" \" << y << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1\\n2 1\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 (c9) - funkcija idi sa 5 parametara\n\nstd::vector<std::vector<int>> mine = {{0,2}, {1,3}, {1,5}, {4,2}, {5,1}, {5,5}} ;\nstd::vector<std::vector<Polje>> tabla = KreirajIgru(6, mine);\n  int x = 0, y = 0;\n  Idi(tabla, x, y, 1, 1);\n  std::cout << x << \" \" << y << std::endl;\n  Idi(tabla, x, y, 2, 1);\n  std::cout << x << \" \" << y << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1\\n2 1\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 (c9) - funkcije UnosKomande i IzvrsiKomandu, eventualne \n\/\/nedorecenosti iz postavke su ovdje dodatno dodefinisane\n\/\/ i smatrat ce se definicijom zadatka. \n\/\/U CIJELOM PROGRAMU PRETPOSTAVITI DA IGRAC KRECE OD \n\/\/POZICIJE (0,0) TE NA TOJ POZICIJI SE NE SMIJE NALAZITI MINA\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "K\n5\n(0,1)\n(0,4)\nf\n(9)\n(0,6)\n(1,3)\n(1,4)\n(2,0)\n(2,1)\n(2,3)\n.\nP1 DoD\nPO\nZ\n"
+            },
+            "expected": [
+                "Unesite komandu: Unesite broj polja: Unesite pozicije mina: Greska, unesite ponovo!\\nGreska, unesite ponovo!\\nGreska, unesite ponovo!\\nUnesite komandu: Tekuca pozicija igraca je (1,1)\\nUnesite komandu: 1 0 2 \\n3 3 4 \\n1 1 3 \\nUnesite komandu: Dovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7 (c9) - funkcije UnosKomande i IzvrsiKomandu, eventualne nedorecenosti iz postavke su ovdje dodatno dodefinisane\n\/\/ i smatrat ce se definicijom zadatka. \n\/\/U CIJELOM PROGRAMU PRETPOSTAVITI DA IGRA KRECE OD POZICIJE (0,0) TE NA TOJ POZICIJI SE NE SMIJE NALAZITI MINA\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "K\n5\n(0,1)\n(0,4)\n(1,3)\n(1,4)\n(2,0)\n(2,3)\n.\nB 1 2\nP> 1 2\nD 1 2\nP> 1 2\nZ\n"
+            },
+            "expected": [
+                "Unesite komandu: Unesite broj polja: Unesite pozicije mina: Unesite komandu: Unesite komandu: Blokirano polje\\nUnesite komandu: Unesite komandu: Tekuca pozicija igraca je (1,2)\\nUnesite komandu: Dovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

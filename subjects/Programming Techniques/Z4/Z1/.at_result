@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-696.23.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "20": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj kugla: Unesite centar 1. kugle: Unesite poluprecnik 1. kugle: Unesite centar 2. kugle: Unesite poluprecnik 2. kugle: Unesite parametre translacije (delta_x,delta_y,delta_z): Kugle nakon obavljenje transformacije imaju sljedece vrijednosti: \n{(1,1,1),2}\n{(1,0,1),3}\nKugla sa najvecom povrsinom je: {(1,0,1),3}\nNe postoje kugle koje se presjecaju!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "21": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj kugla: Unesite centar 1. kugle: Unesite poluprecnik 1. kugle: Unesite centar 2. kugle: Unesite poluprecnik 2. kugle: Unesite centar 3. kugle: Unesite poluprecnik 3. kugle: Unesite parametre translacije (delta_x,delta_y,delta_z): Kugle nakon obavljenje transformacije imaju sljedece vrijednosti: \n{(2,0,0),2}\n{(0,0,0),4}\n{(1,2,3),4}\nKugla sa najvecom povrsinom je: {(0,0,0),4}\nPresjecaju se kugle: {(2,0,0),2}\n{(1,2,3),4}\nPresjecaju se kugle: {(0,0,0),4}\n{(1,2,3),4}\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "22": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj kugla: Unesite centar 1. kugle: Unesite poluprecnik 1. kugle: Unesite centar 2. kugle: Unesite poluprecnik 2. kugle: Ilegalan poluprecnik\nUnesite centar 2. kugle: Unesite poluprecnik 2. kugle: Unesite centar 3. kugle: Unesite poluprecnik 3. kugle: Unesite parametre translacije (delta_x,delta_y,delta_z): Kugle nakon obavljenje transformacije imaju sljedece vrijednosti: \n{(1,3,0),3}\n{(2,2,0),4}\n{(1,-1,3),5}\nKugla sa najvecom povrsinom je: {(1,-1,3),5}\nPresjecaju se kugle: {(1,3,0),3}\n{(2,2,0),4}\nPresjecaju se kugle: {(1,3,0),3}\n{(1,-1,3),5}\nPresjecaju se kugle: {(2,2,0),4}\n{(1,-1,3),5}\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "23": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj kugla: Unesite centar 1. kugle: Unesite poluprecnik 1. kugle: Unesite parametre translacije (delta_x,delta_y,delta_z): Kugle nakon obavljenje transformacije imaju sljedece vrijednosti: \n{(1,1,1),0}\nKugla sa najvecom povrsinom je: {(1,1,1),0}\nNe postoje kugle koje se presjecaju!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "24": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj kugla: Neispravan broj kugli, unesite ponovo!\nNeispravan broj kugli, unesite ponovo!\nNeispravan broj kugli, unesite ponovo!\nUnesite centar 1. kugle: Unesite poluprecnik 1. kugle: Unesite centar 2. kugle: Neispravan centar\nUnesite centar 2. kugle: Unesite poluprecnik 2. kugle: Ilegalan poluprecnik\nUnesite centar 2. kugle: Unesite poluprecnik 2. kugle: Ilegalan poluprecnik\nUnesite centar 2. kugle: Unesite poluprecnik 2. kugle: Unesite centar 3. kugle: Unesite poluprecnik 3. kugle: Unesite parametre translacije (delta_x,delta_y,delta_z): Neispravni parametri translacije, unesite ponovo!\nKugle nakon obavljenje transformacije imaju sljedece vrijednosti: \n{(2,0,0),2}\n{(0,0,0),4}\n{(1,2,3),4}\nKugla sa najvecom povrsinom je: {(0,0,0),4}\nPresjecaju se kugle: {(2,0,0),2}\n{(1,2,3),4}\nPresjecaju se kugle: {(0,0,0),4}\n{(1,2,3),4}\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1527896425
+}

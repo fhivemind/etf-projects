@@ -1,0 +1,119 @@
+{
+    "id": 5483,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 1, zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "15 1 4 2 4 32 16 10 4 8 4 2 1 2 1 7\n1\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Unesite: 1 - za rastuce podnizove, 2 - za opadajuce podnizove: Maksimalni rastuci podnizovi: \\n1 4 \\n2 4 32 \\n4 8 \\n1 2 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "15 1 4 2 4 32 16 10 4 8 4 2 1 2 1 7\n2\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Unesite: 1 - za rastuce podnizove, 2 - za opadajuce podnizove: Maksimalni opadajuci podnizovi: \\n4 2 \\n32 16 \\n8 4 2 1 \\n2 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 1 2 4 2 1 2\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Unesite: 1 - za rastuce podnizove, 2 - za opadajuce podnizove: Maksimalni opadajuci podnizovi: \\n4 2 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10 1 2 3 4 5 8 16 32 16 -8 2\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Unesite: 1 - za rastuce podnizove, 2 - za opadajuce podnizove: Maksimalni opadajuci podnizovi: \\n32 16 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

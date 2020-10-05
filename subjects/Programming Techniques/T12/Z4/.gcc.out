@@ -1,0 +1,26 @@
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp: In function ‘bool operator==(const Kompleksni&, const Kompleksni&)’:
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:26:22: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     return a.re == b.re && a.im == b.im;
+                      ^
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:26:38: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     return a.re == b.re && a.im == b.im;
+                                      ^
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Kompleksni&)’:
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:55:15: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(a.re == 0 && a.im == 0) return tok << 0;
+               ^
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:55:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(a.re == 0 && a.im == 0) return tok << 0;
+                            ^
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:56:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if (a.re != 0) tok << a.re;
+                ^
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:57:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if (a.im == 0) return tok;
+                ^
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:59:27: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(a.im > 0 && a.re != 0) tok << "+";
+                           ^
+/rhome/r/rpolic1/workspace/TP/T12/Z4/main.cpp:61:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(::fabs(a.im) != 1) tok << ::fabs(a.im);
+                       ^

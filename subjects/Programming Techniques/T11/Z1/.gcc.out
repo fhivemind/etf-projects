@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/TP/T11/Z1/main.cpp: In function ‘int main()’:
+/rhome/r/rpolic1/workspace/TP/T11/Z1/main.cpp:26:19: warning: variable ‘k2’ set but not used [-Wunused-but-set-variable]
+     NeobicnaKlasa k2 = 5;
+                   ^

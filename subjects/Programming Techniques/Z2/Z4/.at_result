@@ -1,0 +1,105 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-696.23.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "14": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \nNakon sortiranja podrucja vrijednosti imamo sljedece trojke: \nf(6, 6) = -6\nf(4, 4) = -4\nf(5, 5) = -5\nf(3, 3) = -3\nf(2, 2) = -2\nf(1, 1) = -1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "15": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \nIzuzetak: Vrijednost koja odgovara nekom od parova nije nadjena",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "16": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \nIzuzetak: Vrijednost koja odgovara nekom od parova nije nadjena",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "17": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \nNakon sortiranja podrucja vrijednosti imamo sljedece trojke: \nf(7, 2) = -12\nf(5, 1) = -9\nf(3, -1) = -7\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "18": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \nNakon sortiranja podrucja vrijednosti imamo sljedece trojke: \nf(7, 2) = -12\nf(5, 1) = -9\nf(3, -1) = -7\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "19": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \nNakon sortiranja podrucja vrijednosti imamo sljedece trojke: \nf(16, 4) = -28\nf(27, 1) = -53\nf(8, 0) = -16\nf(5, -5) = -15\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1524118029
+}

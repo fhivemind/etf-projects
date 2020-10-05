@@ -1,0 +1,147 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-696.23.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "46": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nPjescani sat unesene matrice je:\n\n   1   2   3\n       5\n   7   8   9\n\n  10  11  12\n      14\n  16  17  18\n\n  19  20  21\n      23\n  25  26  27\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "47": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nPjescani sat unesene matrice je:\n\n   7   8   9\n       5\n   1   2   3\n\n  16  17  18\n      14\n  10  11  12\n\n  25  26  27\n      23\n  19  20  21\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "48": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nPjescani sat unesene matrice je:\n\n   1   4   7\n       5\n   3   6   9\n\n  10  13  16\n      14\n  12  15  18\n\n  19  22  25\n      23\n  21  24  27\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "49": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nPjescani sat unesene matrice je:\n\n   3   6   9\n       5\n   1   4   7\n\n  12  15  18\n      14\n  10  13  16\n\n  21  24  27\n      23\n  19  22  25\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "50": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nPjescani sat unesene matrice je:\n\n   1   2   3\n      11\n  19  20  21\n\n   4   5   6\n      14\n  22  23  24\n\n   7   8   9\n      17\n  25  26  27\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "51": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nPjescani sat unesene matrice je:\n\n  19  20  21\n      11\n   1   2   3\n\n  22  23  24\n      14\n   4   5   6\n\n  25  26  27\n      17\n   7   8   9\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "52": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nIzuzetak: 3D kontejner ne zadovoljava uvjet neparnosti",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "53": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Dimenzija nije ispravna, unesite opet: Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: \nIzuzetak: 3D kontejner ne zadovoljava uvjet neparnosti",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "54": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju (x/y/z): Dimenzija nije ispravna, unesite opet: Unesite elemente kontejnera: Unesite smjer kretanja [0 - 5]: Smjer nije ispravan, unesite opet: \nIzuzetak: 3D kontejner ne zadovoljava uvjet neparnosti",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1524435817
+}

@@ -1,0 +1,4 @@
+/rhome/r/rpolic1/workspace/TP/T9/Z2/main.cpp: In member function ‘void Vektor3d::Ispisi() const’:
+/rhome/r/rpolic1/workspace/TP/T9/Z2/main.cpp:21:20: error: increment of member ‘Vektor3d::brojIspisa’ in read-only object
+    this->brojIspisa++;
+                    ^

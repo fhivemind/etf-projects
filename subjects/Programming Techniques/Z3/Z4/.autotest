@@ -1,0 +1,545 @@
+{
+    "id": 5494,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 3, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 216,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 (trivijalan) - test iz postavke\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "12 6 4\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 46 karata, i to:\\nPik: 2 3 4 5 6 7 8 10 J Q A \\nTref: 2 3 4 5 6 7 8 10 J K A \\nHerc: 2 3 4 5 6 7 8 9 10 Q K A \\nKaro: 2 3 4 5 6 7 8 9 J Q K A \\nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 50 karata, i to:\\nPik: 2 3 4 5 6 7 8 10 J Q K A \\nTref: 2 3 4 5 6 7 8 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 217,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 (trivijalan)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "12 6 6\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 46 karata, i to:\\nPik: 2 3 4 5 6 7 8 10 J Q A \\nTref: 2 3 4 5 6 7 8 10 J K A \\nHerc: 2 3 4 5 6 7 8 9 10 Q K A \\nKaro: 2 3 4 5 6 7 8 9 J Q K A \\nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 52 karata, i to:\\nPik: 2 3 4 5 6 7 8 9 10 J Q K A \\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 218,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 (trivijalan)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "13 4 0\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 48 karata, i to:\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q K \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K \\nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 48 karata, i to:\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q K \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 219,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 (trivijalan)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 26 13\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 26 karata, i to:\\nPik: 2 4 6 8 10 Q A \\nTref: 3 5 7 9 J K \\nHerc: 2 4 6 8 10 Q A \\nKaro: 3 5 7 9 J K \\nUnesite broj karata koje zelite vratiti u spil: U spilu trenutno ima 39 karata, i to:\\nPik: 2 3 4 5 6 7 8 9 10 J Q K A \\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 4 6 8 10 Q A \\nKaro: 3 5 7 9 J K \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 220,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 (izuzeci)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-5 3\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: Izuzetak: Neispravni elementi za izbacivanje!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 221,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 (izuzeci)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 -3\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: Izuzetak: Neispravni elementi za izbacivanje!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 222,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7 (izuzeci)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "13 4 5\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 48 karata, i to:\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q K \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K \\nUnesite broj karata koje zelite vratiti u spil: Izuzetak: Nedovoljno karata u redu!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 223,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8 (izuzeci)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10 4 -2\n"
+            },
+            "expected": [
+                "Unesite korak razbrajanja: Unesite broj karata koje zelite izbaciti: U spilu trenutno ima 48 karata, i to:\\nPik: 2 3 4 5 6 7 8 9 10 Q K A \\nTref: 2 3 4 5 6 7 9 10 J Q K A \\nHerc: 2 3 4 6 7 8 9 10 J Q K A \\nKaro: 3 4 5 6 7 8 9 10 J Q K A \\nUnesite broj karata koje zelite vratiti u spil: Izuzetak: Broj n je besmislen!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 224,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije KreirajSpil\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     IspSpi(spil);\n     ",
+            "global_above_main": "#include <vector>\nvoid IspSpi(std::list<std::pair<Boje, std::string>>& spil)\n{\n     std::vector<std::string> b {\"Pik\", \"Tref\", \"Herc\", \"Karo\"};\n\n     auto it(spil.begin());\n     for (int i{0}; i < 4; i++)\n     {\n          std::cout << b.at(i) << \": \";\n          while ((*it).first == Boje(i) && it != spil.end())\n          {\n               std::cout << (*it).second << \" \";\n               it++;\n          }\n          std::cout << std::endl;\n     }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pik: 2 3 4 5 6 7 8 9 10 J Q K A \\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 225,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije IzbaciKarteRazbrajanjem\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     short int a{6};\n     int b{4};\n     IzbaciKarteRazbrajanjem(spil, a, b);\n     IspSpi(spil);",
+            "global_above_main": "#include <vector>\nvoid IspSpi(std::list<std::pair<Boje, std::string>>& spil)\n{\n     std::vector<std::string> b {\"Pik\", \"Tref\", \"Herc\", \"Karo\"};\n\n     auto it(spil.begin());\n     for (int i{0}; i < 4; i++)\n     {\n          std::cout << b.at(i) << \": \";\n          while ((*it).first == Boje(i) && it != spil.end())\n          {\n               std::cout << (*it).second << \" \";\n               it++;\n          }\n          std::cout << std::endl;\n     }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pik: 2 3 4 5 6 8 9 10 J Q A \\nTref: 2 3 4 5 7 8 9 10 J K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 226,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije IzbaciKarteRazbrajanjem (sa konstantnim vrijednostima)\n     const short int a{6}, b{4};\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     IzbaciKarteRazbrajanjem(spil, a, b);\n     IspSpi(spil);",
+            "global_above_main": "#include <vector>\nvoid IspSpi(std::list<std::pair<Boje, std::string>>& spil)\n{\n     std::vector<std::string> b {\"Pik\", \"Tref\", \"Herc\", \"Karo\"};\n\n     auto it(spil.begin());\n     for (int i{0}; i < 4; i++)\n     {\n          std::cout << b.at(i) << \": \";\n          while ((*it).first == Boje(i) && it != spil.end())\n          {\n               std::cout << (*it).second << \" \";\n               it++;\n          }\n          std::cout << std::endl;\n     }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pik: 2 3 4 5 6 8 9 10 J Q A \\nTref: 2 3 4 5 7 8 9 10 J K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 227,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije IzbaciKarteRazbrajanjem - povratna vrijednost\n     std::queue<std::pair<std::string,std::string>> red;\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     short int a{6}; int b{4};\n     red = IzbaciKarteRazbrajanjem(spil, a, b);\n     std::cout << \"Velicina reda: \" << red.size() << std::endl;\n    \n     while (!red.empty())\n     {\n          std::cout << red.front().first << \" \" << red.front().second << std::endl;\n          red.pop();\n     }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Velicina reda: 4\\nPik 7\\nPik K\\nTref 6\\nTref Q"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 228,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije VratiPrvihNKarata - povratna vrijednost\n     std::queue<std::pair<std::string,std::string>> red;\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     short int a{6}; int b{4};\n     red = IzbaciKarteRazbrajanjem(spil, a, b);\n     VratiPrvihNKarata(spil, red, 2);\n     IspSpi(spil);",
+            "global_above_main": "#include <vector>\nvoid IspSpi(std::list<std::pair<Boje, std::string>>& spil)\n{\n     std::vector<std::string> b {\"Pik\", \"Tref\", \"Herc\", \"Karo\"};\n\n     auto it(spil.begin());\n     for (int i{0}; i < 4; i++)\n     {\n          std::cout << b.at(i) << \": \";\n          while ((*it).first == Boje(i) && it != spil.end())\n          {\n               std::cout << (*it).second << \" \";\n               it++;\n          }\n          std::cout << std::endl;\n     }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pik: 2 3 4 5 6 7 8 9 10 J Q K A \\nTref: 2 3 4 5 7 8 9 10 J K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 229,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije IzbaciKarteRazbrajanjem - prazan spil\n     std::queue<std::pair<std::string,std::string>> red;\n     std::list<std::pair<Boje, std::string>> spil;\n     short int a{6}; int b{4};\n     red = IzbaciKarteRazbrajanjem(spil, a, b);\n     std::cout << spil.size() << \" \" << red.size();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 230,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije IzbaciKarteRazbrajanjem - prazan spil\n     std::queue<std::pair<std::string,std::string>> red;\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     short int a{4}; int b{52};\n     red = IzbaciKarteRazbrajanjem(spil, a, b);\n     std::cout << spil.size() << \" \" << red.size();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 52"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 231,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije IzbaciKarteRazbrajanjem - prazan spil\n     std::queue<std::pair<std::string,std::string>> red;\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     short int a{4}; int b{48};\n     IzbaciKarteRazbrajanjem(spil, a, b);\n     a = 4; b = 4;\n     red = IzbaciKarteRazbrajanjem(spil, a, b);\n     std::cout << spil.size() << \" \" << red.size();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 232,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     try\n     {\n          \/\/Test funkcije IzbaciKarteRazbrajanjem - neispravna lista\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n          spil.push_back(std::make_pair(Boje(0), \"A\"));\n          short int a{4}; int b{48};\n          IzbaciKarteRazbrajanjem(spil, a, b);\n          std::cout << \"Ovo se ne smije ispisati.\";\n     }\n     catch (std::logic_error& e)\n     {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n     }\n     \n     try\n     {\n          \/\/Test funkcije IzbaciKarteRazbrajanjem - neispravna lista\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n          spil.pop_back();\n          spil.push_back(std::make_pair(Boje(0), \"A\"));\n          short int a{4}; int b{48};\n          IzbaciKarteRazbrajanjem(spil, a, b);\n          std::cout << \"Ovo se ne smije ispisati.\";\n          \n     }\n     catch (std::logic_error& e)\n     {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n     }\n     \n     try\n     {\n          \/\/Test funkcije IzbaciKarteRazbrajanjem - neispravna lista\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n          spil.pop_back();\n          spil.push_back(std::make_pair(Boje(3), \"A\"));\n          short int a{4}; int  b{48};\n          IzbaciKarteRazbrajanjem(spil, a, b);\n     }\n     catch (std::logic_error& e)\n     {\n          std::cout << \"Ovo se ne smije ispisati.\";\n     }\n     \n     try\n     {\n          \/\/Test funkcije IzbaciKarteRazbrajanjem - neispravna lista\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n          spil.pop_back();\n          spil.push_back(std::make_pair(Boje(3), \"P\"));\n          short int a{4}; int b{48};\n          IzbaciKarteRazbrajanjem(spil, a, b);\n          std::cout << \"Ovo se ne smije ispisati.\";\n          \n     }\n     catch (std::logic_error& e)\n     {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n     }\n     \n     try\n     {\n          \/\/Test funkcije IzbaciKarteRazbrajanjem - neispravna lista\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpilRikverc();\n          short int a{4}; int b{48};\n          IzbaciKarteRazbrajanjem(spil, a, b);\n          std::cout << \"Ovo se ne smije ispisati.\";\n          \n     }\n     catch (std::logic_error& e)\n     {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n     }",
+            "global_above_main": "std::list<std::pair<Boje, std::string>> KreirajSpilRikverc()\n{\n     std::vector<std::string> z {\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\",\"10\",\"J\",\"Q\",\"K\",\"A\"};\n     std::list<std::pair<Boje, std::string>> spil(52);\n     auto it(spil.begin());\n     for (int i{3}; i > -1; i--)\n          for (int j{0}; j < 13; j++)\n               *it++ = std::make_pair(Boje(i), z.at(j));\n     return spil;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Neispravna lista!\\nIzuzetak: Neispravna lista!\\nIzuzetak: Neispravna lista!\\nIzuzetak: Neispravna lista!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 233,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     try\n     {\n          \/\/Test funkcije VratiPrvihNKarata - n vece od broja elemenata reda\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n          short int a{4}; int  b{2};\n          auto red = IzbaciKarteRazbrajanjem(spil, a, b);\n          VratiPrvihNKarata(spil, red, 3);\n          std::cout << \"Ovo se ne smije ispisati.\";\n     }\n     catch (std::exception& e)\n     {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n     }",
+            "global_above_main": "#include <exception>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nedovoljno karata u redu!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 234,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     try\n     {\n          \/\/Test funkcije VratiPrvihNKarata - n besmisleno\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n          short int a{4}; int  b{2};\n          auto red = IzbaciKarteRazbrajanjem(spil, a, b);\n          VratiPrvihNKarata(spil, red, -3);\n          std::cout << \"Ovo se ne smije ispisati.\";\n     }\n     catch (std::exception& e)\n     {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n     }",
+            "global_above_main": "#include <exception>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Broj n je besmislen!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 235,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     try\n     {\n          \/\/Test funkcije VratiPrvihNKarata\n          std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n          short int a{4}; int  b{2};\n          auto red = IzbaciKarteRazbrajanjem(spil, a, b);\n          VratiPrvihNKarata(spil, red, 1);\n          std::cout << spil.size() << \" \" << red.size() << std::endl;\n          VratiPrvihNKarata(spil, red, 1);\n          std::cout << spil.size() << \" \" << red.size() << std::endl;\n          IspSpi(spil);\n     }\n     catch (std::exception& e)\n     {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n     }",
+            "global_above_main": "#include <vector>\n#include <exception>\nvoid IspSpi(std::list<std::pair<Boje, std::string>>& spil)\n{\n     std::vector<std::string> b {\"Pik\", \"Tref\", \"Herc\", \"Karo\"};\n\n     auto it(spil.begin());\n     for (int i{0}; i < 4; i++)\n     {\n          std::cout << b.at(i) << \": \";\n          while ((*it).first == Boje(i) && it != spil.end())\n          {\n               std::cout << (*it).second << \" \";\n               it++;\n          }\n          std::cout << std::endl;\n     }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "51 1\\n52 0\\nPik: 2 3 4 5 6 7 8 9 10 J Q K A \\nTref: 2 3 4 5 6 7 8 9 10 J Q K A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 236,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "     \/\/Test funkcije IzbaciKarte\n     std::list<std::pair<Boje, std::string>> spil = KreirajSpil();\n     std::multimap <Boje, std::string> mapa1 {{Boje(0), \"A\"}, {Boje(1), \"K\"}, {Boje(2), \"Q\"}, {Boje(3), \"J\"}};\n     IzbaciKarte(spil, mapa1);\n     std::cout << mapa1.size() << std::endl;\n     IspSpi(spil);\n     \n     std::multimap <Boje, std::string> mapa2 {{Boje(0), \"A\"}, {Boje(1), \"K\"}, {Boje(2), \"A\"}, {Boje(3), \"K\"}};\n     IzbaciKarte(spil, mapa2);\n     std::cout << mapa2.size() << std::endl;\n     IspSpi(spil);\n     \n     std::multimap <Boje, std::string> mapa3 {{Boje(0), \"A\"}, {Boje(1), \"K\"}, {Boje(2), \"A\"}, {Boje(3), \"K\"}};\n     IzbaciKarte(spil, mapa3);\n     std::cout << mapa3.size() << std::endl;\n     IspSpi(spil);\n     \n     spil = KreirajSpil();\n     std::multimap <Boje, std::string> mapa4 {{Boje(0), \"A\"}, {Boje(1), \"K\"}, {Boje(0), \"A\"}, {Boje(1), \"K\"}};\n     IzbaciKarte(spil, mapa4);\n     std::cout << mapa4.size() << std::endl;\n     IspSpi(spil);\n     \n     spil.resize(0);\n     IzbaciKarte(spil, mapa4);\n     std::cout << mapa4.size() << std::endl;",
+            "global_above_main": "#include <vector>\nvoid IspSpi(std::list<std::pair<Boje, std::string>>& spil)\n{\n     std::vector<std::string> b {\"Pik\", \"Tref\", \"Herc\", \"Karo\"};\n\n     auto it(spil.begin());\n     for (int i{0}; i < 4; i++)\n     {\n          std::cout << b.at(i) << \": \";\n          while ((*it).first == Boje(i) && it != spil.end())\n          {\n               std::cout << (*it).second << \" \";\n               it++;\n          }\n          std::cout << std::endl;\n     }\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J K A \\nKaro: 2 3 4 5 6 7 8 9 10 Q K A \\n2\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J K \\nKaro: 2 3 4 5 6 7 8 9 10 Q A \\n4\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J K \\nKaro: 2 3 4 5 6 7 8 9 10 Q A \\n2\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\n2",
+                "0\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J K A \\nKaro: 2 3 4 5 6 7 8 9 10 Q K A \\n2\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J K \\nKaro: 2 3 4 5 6 7 8 9 10 Q A \\n4\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J K \\nKaro: 2 3 4 5 6 7 8 9 10 Q A \\n0\\nPik: 2 3 4 5 6 7 8 9 10 J Q K \\nTref: 2 3 4 5 6 7 8 9 10 J Q A \\nHerc: 2 3 4 5 6 7 8 9 10 J Q K A \\nKaro: 2 3 4 5 6 7 8 9 10 J Q K A \\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

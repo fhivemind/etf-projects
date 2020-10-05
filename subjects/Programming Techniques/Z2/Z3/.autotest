@@ -1,0 +1,269 @@
+{
+    "id": 5487,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 2, zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 52,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - specificiranje studentskog maina - fragmentirana alokacija\n\n\n\/\/Ispis je na 3 mjesta sirine, sa poravnanjem \n\/\/na lijevu stranu.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n1 2 3 1 2\n1\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Dinamicki alocirana matrica:\\n3  \\n2  3  \\n1  2  3  \\n3  \\n2  3  \\n1  2  3  \\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 53,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - specificiranje studentskog maina - kontinualna alokacija\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n1 2 3 1 2\n0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Dinamicki alocirana matrica:\\n1  \\n2  1  \\n3  2  1  \\n1  \\n2  1  \\n3  2  1  \\n\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 54,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\n1 2 3 1 2 3\n1"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Dinamicki alocirana matrica:\\n3  \\n2  3  \\n1  2  3  \\n3  \\n2  3  \\n1  2  3  \\n\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 55,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n1 2 3 \n1"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Dinamicki alocirana matrica:\\n3  \\n2  3  \\n1  2  3  \\n3  \\n2  3  \\n1  2  3  \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 56,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\n1 2 3 1 2 3\n0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Dinamicki alocirana matrica:\\n1  \\n2  1  \\n3  2  1  \\n1  \\n2  1  \\n3  2  1  "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 57,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 - specificiranje studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n1 2 3\n0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Dinamicki alocirana matrica:\\n1  \\n2  1  \\n3  2  1  \\n1  \\n2  1  \\n3  2  1  "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 58,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7 - specificiranje studentskog maina \n\/\/bacanje izuzetka - fragmentirana alokacija\n\n\n\/\/Napomena: \"Izuzetak: \" se ispisuje u mainu i ne cini \n\/\/sastavni dio teksta koji se baca iz funkcije.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0\n1\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Izuzetak: Prazan vektor!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 59,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8 - specificiranje studentskog maina \n\/\/bacanje izuzetka - kontinualna alokacija\n\n\n\/\/Napomena: \"Izuzetak: \" se ispisuje u mainu i ne cini \n\/\/sastavni dio teksta koji se baca iz funkcije.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0\n0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Izuzetak: Prazan vektor!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 60,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9 - specificiranje studentskog maina \n\/\/bacanje izuzetka - fragmentirana alokacija\n\n\/\/Napomena: \"Izuzetak: \" se ispisuje u mainu i ne cini \n\/\/sastavni dio teksta koji se baca iz funkcije.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n1 2 -3\n1\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Izuzetak: Neispravan vektor!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 61,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10 - specificiranje studentskog maina \n\/\/bacanje izuzetka - kontinualna alokacija\n\n\/\/Napomena: \"Izuzetak: \" se ispisuje u mainu i ne cini \n\/\/sastavni dio teksta koji se baca iz funkcije.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n1 2 -3\n0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata vektora: Unesite elemente vektora: Odaberite alokaciju: 1 - fragmentirana, 0 - kontinualna: Izuzetak: Neispravan vektor!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

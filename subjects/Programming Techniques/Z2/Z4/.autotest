@@ -1,0 +1,169 @@
+{
+    "id": 5488,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 2, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 14,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - specificiranje studentskog maina\n\n\/\/Elementi vektora v1 i v2 se najprije sortiraju u opadaju\u0107i poredak po\n\/\/broju prostih faktora, a onda se sortira i vektor v3. Ako dva elementa\n\/\/vektora imaju isti broj prostih faktora, onda ve\u0107i broj dolazi ispred manjeg \n\/\/(npr. 6 = 2 * 3, 4 = 2 * 2, pa 6 dolazi ispred 4)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\n1 2 3 4 5 6\n6 5 4 3 2 1\n-3 -5 -1 -4 -2 -6\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \\nNakon sortiranja podrucja vrijednosti imamo sljedece trojke:\\nf(6, 6) = -6\\nf(4, 4) = -4\\nf(5, 5) = -5\\nf(3, 3) = -3\\nf(2, 2) = -2\\nf(1, 1) = -1\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 15,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - specificiranje studentskog maina\n\n\/\/Bacanje izuzetka kada ne postoji podru\u010dje vrijednosti\n\/\/za neki ure\u0111eni par\n\n\/\/Tekst \"Izuzetak: \" se ne baca iz funkcije skupa sa tekstom izuzetka, vec\n\/\/se ispisuje u mainu.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\n1 2 3 4 5 6\n6 5 4 3 2 1\n-3 -5 -15 -4 -2 -6\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \\nIzuzetak: Vrijednost koja odgovara nekom od parova nije nadjena"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 16,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - testiranje funkcije kriterija\n\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\n-1 -2 -3 -4 -5 -6\n6 5 4 3 2 1\n-3 -5 -1 -4 -2 -6"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \\nIzuzetak: Vrijednost koja odgovara nekom od parova nije nadjena"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 17,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - trivijalan test\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n3 7 5\n2 -1 1\n-9 -7 -12\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \\nNakon sortiranja podrucja vrijednosti imamo sljedece trojke: \\nf(7, 2) = -12\\nf(5, 1) = -9\\nf(3, -1) = -7\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 18,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 - testiranje ispravnog unosa\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n3 7 7 3 7 5\n2 -1 2 -1 1\n-9 -7 -7 -12\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \\nNakon sortiranja podrucja vrijednosti imamo sljedece trojke: \\nf(7, 2) = -12\\nf(5, 1) = -9\\nf(3, -1) = -7\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 19,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 - trivijalan\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n8 5 27 5 16\n0 1 -5 1 4\n-28 -15 -16 -28 -53"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente prvog vektora: Unesite elemente drugog vektora: Unesite elemente treceg vektora: \\nNakon sortiranja podrucja vrijednosti imamo sljedece trojke: \\nf(16, 4) = -28\\nf(27, 1) = -53\\nf(8, 0) = -16\\nf(5, -5) = -15\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

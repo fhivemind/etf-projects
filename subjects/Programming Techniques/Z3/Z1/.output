@@ -1,0 +1,4 @@
+Odaberite opciju (1 - unos cvorova, 2 - aproksimacija): Unesite krajeve intervala i korak: Unesite argument (ili "kraj" za kraj): f(10000) = 1e+08 fapprox(10000) = 1e+08
+Unesite argument (ili "kraj" za kraj): f(1) = 1.84147 fapprox(1) = 1.84147
+Unesite argument (ili "kraj" za kraj): f(10) = 99.456 fapprox(10) = 99.456
+Unesite argument (ili "kraj" za kraj): 

@@ -1,0 +1,51 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-696.23.1.el6.x86_64 x86_64\n\"CentOS release 6.9 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_1.cpp: In function ‘int main()’:\nbs_test_1.cpp:173:21: error: variable ‘std::ofstream f’ has initializer but incomplete type\n     std::ofstream f (\"ABC.TXT\");\n                     ^\nbs_test_1.cpp:182:7: error: ‘class Skladiste’ has no member named ‘UcitajIzDatoteke’\n     s.UcitajIzDatoteke(\"ABC.TXT\");\n       ^~~~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "21",
+                        "message": "variable 'std::ofstream f' has initializer but incomplete type",
+                        "output": "/tmp/buildservice/bs_5700/bs_test_1.cpp:173:21: error: variable ‘std::ofstream f’ has initializer but incomplete type     std::ofstream f (\"ABC.TXT\");                     ^",
+                        "code": "std::ofstream f (\"ABC.TXT\");"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 11,
+                        "col": "7",
+                        "message": "'class Skladiste' has no member named 'UcitajIzDatoteke'",
+                        "output": "/tmp/buildservice/bs_5700/bs_test_1.cpp:182:7: error: ‘class Skladiste’ has no member named ‘UcitajIzDatoteke’     s.UcitajIzDatoteke(\"ABC.TXT\");       ^~~~~~~~~~~~~~~~",
+                        "code": "s.UcitajIzDatoteke(\"ABC.TXT\");"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1529241727
+}

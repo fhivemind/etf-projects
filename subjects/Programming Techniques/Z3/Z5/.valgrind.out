@@ -1,0 +1,289 @@
+==2955== Memcheck, a memory error detector
+==2955== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==2955== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==2955== Command: /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme
+==2955== Parent PID: 2905
+==2955== 
+==2955== Invalid read of size 8
+==2955==    at 0x4035D8: _increment(Cvor*&) (main.cpp:288)
+==2955==    by 0x4023AD: IzbaciKarteRazbrajanjem(Cvor*&, short const&, int const&) (main.cpp:163)
+==2955==    by 0x4030E4: main (main.cpp:245)
+==2955==  Address 0x5a26100 is 16 bytes inside a block of size 24 free'd
+==2955==    at 0x4C2C2BC: operator delete(void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x403915: _remove(Cvor*&, Cvor*&) (main.cpp:321)
+==2955==    by 0x402392: IzbaciKarteRazbrajanjem(Cvor*&, short const&, int const&) (main.cpp:167)
+==2955==    by 0x4030E4: main (main.cpp:245)
+==2955== 
+==2955== Invalid read of size 4
+==2955==    at 0x406678: std::less<Boje>::operator()(Boje const&, Boje const&) const (stl_function.h:235)
+==2955==    by 0x4065DF: std::_Rb_tree<Boje, std::pair<Boje const, std::string>, std::_Select1st<std::pair<Boje const, std::string> >, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >::_M_lower_bound(std::_Rb_tree_node<std::pair<Boje const, std::string> >*, std::_Rb_tree_node<std::pair<Boje const, std::string> >*, Boje const&) (stl_tree.h:1141)
+==2955==    by 0x405AA0: std::_Rb_tree<Boje, std::pair<Boje const, std::string>, std::_Select1st<std::pair<Boje const, std::string> >, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >::find(Boje const&) (stl_tree.h:1792)
+==2955==    by 0x404E82: std::multimap<Boje, std::string, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >::find(Boje const&) (stl_multimap.h:731)
+==2955==    by 0x4020FE: IzbaciKarte(Cvor*&, std::multimap<Boje, std::string, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >&) (main.cpp:141)
+==2955==    by 0x403109: main (main.cpp:246)
+==2955==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==2955== 
+==2955== 
+==2955== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==2955==  Access not within mapped region at address 0x0
+==2955==    at 0x406678: std::less<Boje>::operator()(Boje const&, Boje const&) const (stl_function.h:235)
+==2955==    by 0x4065DF: std::_Rb_tree<Boje, std::pair<Boje const, std::string>, std::_Select1st<std::pair<Boje const, std::string> >, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >::_M_lower_bound(std::_Rb_tree_node<std::pair<Boje const, std::string> >*, std::_Rb_tree_node<std::pair<Boje const, std::string> >*, Boje const&) (stl_tree.h:1141)
+==2955==    by 0x405AA0: std::_Rb_tree<Boje, std::pair<Boje const, std::string>, std::_Select1st<std::pair<Boje const, std::string> >, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >::find(Boje const&) (stl_tree.h:1792)
+==2955==    by 0x404E82: std::multimap<Boje, std::string, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >::find(Boje const&) (stl_multimap.h:731)
+==2955==    by 0x4020FE: IzbaciKarte(Cvor*&, std::multimap<Boje, std::string, std::less<Boje>, std::allocator<std::pair<Boje const, std::string> > >&) (main.cpp:141)
+==2955==    by 0x403109: main (main.cpp:246)
+==2955==  If you believe this happened as a result of a stack
+==2955==  overflow in your program's main thread (unlikely but
+==2955==  possible), you can try to increase the size of the
+==2955==  main thread stack using the --main-stacksize= flag.
+==2955==  The main thread stack size used in this run was 8388608.
+==2955== 
+==2955== HEAP SUMMARY:
+==2955==     in use at exit: 1,182 bytes in 35 blocks
+==2955==   total heap usage: 428 allocs, 393 frees, 32,314 bytes allocated
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 1 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403DAD: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 2 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403DDE: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 3 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403E0F: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 4 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403E40: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 5 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403E71: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 6 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403EA2: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 7 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403ED3: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 8 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403F04: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 9 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403F66: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 10 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403F97: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 11 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403FC8: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 12 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403FF9: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 13 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402C48: main (main.cpp:229)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 14 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402C74: main (main.cpp:229)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 15 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402DDA: main (main.cpp:234)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 16 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402E06: main (main.cpp:234)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 17 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402E32: main (main.cpp:234)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 18 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402E58: main (main.cpp:234)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 19 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402FC6: main (main.cpp:240)
+==2955== 
+==2955== 26 bytes in 1 blocks are possibly lost in loss record 20 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4048F5: std::pair<Boje const, std::string>::pair<Boje, char const (&) [2], void>(Boje&&, char const (&) [2]) (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x402FEC: main (main.cpp:240)
+==2955== 
+==2955== 27 bytes in 1 blocks are possibly lost in loss record 21 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x403F35: __static_initialization_and_destruction_0(int, int) (main.cpp:14)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 28 bytes in 1 blocks are possibly lost in loss record 22 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x404176: __static_initialization_and_destruction_0(int, int) (main.cpp:15)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 29 bytes in 1 blocks are possibly lost in loss record 23 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4041A7: __static_initialization_and_destruction_0(int, int) (main.cpp:15)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 29 bytes in 1 blocks are possibly lost in loss record 24 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4041D8: __static_initialization_and_destruction_0(int, int) (main.cpp:15)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== 29 bytes in 1 blocks are possibly lost in loss record 25 of 30
+==2955==    at 0x4C2B0E0: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==2955==    by 0x4EF1248: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2970: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x4EF2D87: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+==2955==    by 0x404209: __static_initialization_and_destruction_0(int, int) (main.cpp:15)
+==2955==    by 0x4044CE: _GLOBAL__sub_I__Z7toKartaSt4pairI4BojeSsE (main.cpp:328)
+==2955==    by 0x408FBC: __libc_csu_init (in /rhome/r/rpolic1/workspace/TP/Z3/Z5/.runme)
+==2955==    by 0x5372E54: (below main) (libc-start.c:246)
+==2955== 
+==2955== LEAK SUMMARY:
+==2955==    definitely lost: 0 bytes in 0 blocks
+==2955==    indirectly lost: 0 bytes in 0 blocks
+==2955==      possibly lost: 662 bytes in 25 blocks
+==2955==    still reachable: 520 bytes in 10 blocks
+==2955==         suppressed: 0 bytes in 0 blocks
+==2955== Reachable blocks (those to which a pointer was found) are not shown.
+==2955== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==2955== 
+==2955== For counts of detected and suppressed errors, rerun with: -v
+==2955== ERROR SUMMARY: 27 errors from 27 contexts (suppressed: 0 from 0)

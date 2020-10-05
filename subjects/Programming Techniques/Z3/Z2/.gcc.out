@@ -1,0 +1,72 @@
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp: In function ‘Pojmovi KreirajIndeksPojmova(const Knjiga&)’:
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:68:78: error: no matching function for call to ‘std::map<std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >::insert(std::pair<std::basic_string<char>, std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >)’
+                          _outputMap.insert(std::make_pair(_word.first, _data));
+                                                                              ^
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:68:78: note: candidates are:
+In file included from /usr/include/c++/4.8/map:61:0,
+                 from /rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:6:
+/usr/include/c++/4.8/bits/stl_map.h:594:7: note: std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename _Alloc::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(const value_type&) [with _Key = std::basic_string<char>; _Tp = std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; _Compare = std::less<std::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >; typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename _Alloc::rebind<std::pair<const _Key, _Tp> >::other>::iterator = std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >]
+       insert(const value_type& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_map.h:594:7: note:   no known conversion for argument 1 from ‘std::pair<std::basic_string<char>, std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >’ to ‘const value_type& {aka const std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >&}’
+/usr/include/c++/4.8/bits/stl_map.h:602:9: note: template<class _Pair, class> std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename _Alloc::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(_Pair&&) [with _Pair = _Pair; <template-parameter-2-2> = <template-parameter-1-2>; _Key = std::basic_string<char>; _Tp = std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; _Compare = std::less<std::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >]
+         insert(_Pair&& __x)
+         ^
+/usr/include/c++/4.8/bits/stl_map.h:602:9: note:   template argument deduction/substitution failed:
+/usr/include/c++/4.8/bits/stl_map.h:598:32: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’
+       template<typename _Pair, typename = typename
+                                ^
+/usr/include/c++/4.8/bits/stl_map.h:615:7: note: void std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::initializer_list<std::pair<const _Key, _Tp> >) [with _Key = std::basic_string<char>; _Tp = std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; _Compare = std::less<std::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >]
+       insert(std::initializer_list<value_type> __list)
+       ^
+/usr/include/c++/4.8/bits/stl_map.h:615:7: note:   no known conversion for argument 1 from ‘std::pair<std::basic_string<char>, std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >’ to ‘std::initializer_list<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >’
+/usr/include/c++/4.8/bits/stl_map.h:644:7: note: std::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, const value_type&) [with _Key = std::basic_string<char>; _Tp = std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; _Compare = std::less<std::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >; std::map<_Key, _Tp, _Compare, _Alloc>::iterator = std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >; std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator = std::_Rb_tree_const_iterator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >; std::map<_Key, _Tp, _Compare, _Alloc>::value_type = std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >]
+       insert(const_iterator __position, const value_type& __x)
+       ^
+/usr/include/c++/4.8/bits/stl_map.h:644:7: note:   candidate expects 2 arguments, 1 provided
+/usr/include/c++/4.8/bits/stl_map.h:655:9: note: template<class _Pair, class> std::map<_Key, _Tp, _Compare, _Alloc>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(std::map<_Key, _Tp, _Compare, _Alloc>::const_iterator, _Pair&&) [with _Pair = _Pair; <template-parameter-2-2> = <template-parameter-1-2>; _Key = std::basic_string<char>; _Tp = std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; _Compare = std::less<std::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >]
+         insert(const_iterator __position, _Pair&& __x)
+         ^
+/usr/include/c++/4.8/bits/stl_map.h:655:9: note:   template argument deduction/substitution failed:
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:68:78: note:   cannot convert ‘std::make_pair(_T1&&, _T2&&) [with _T1 = const std::basic_string<char>&; _T2 = std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >&; typename std::__decay_and_strip<_T2>::__type = std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; typename std::__decay_and_strip<_Tp>::__type = std::basic_string<char>]((* & _data))’ (type ‘std::pair<std::basic_string<char>, std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >’) to type ‘std::map<std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >::const_iterator {aka std::_Rb_tree_const_iterator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >}’
+                          _outputMap.insert(std::make_pair(_word.first, _data));
+                                                                              ^
+In file included from /usr/include/c++/4.8/map:61:0,
+                 from /rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:6:
+/usr/include/c++/4.8/bits/stl_map.h:670:9: note: template<class _InputIterator> void std::map<_Key, _Tp, _Compare, _Alloc>::insert(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _Key = std::basic_string<char>; _Tp = std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; _Compare = std::less<std::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > >]
+         insert(_InputIterator __first, _InputIterator __last)
+         ^
+/usr/include/c++/4.8/bits/stl_map.h:670:9: note:   template argument deduction/substitution failed:
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:68:78: note:   candidate expects 2 arguments, 1 provided
+                          _outputMap.insert(std::make_pair(_word.first, _data));
+                                                                              ^
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp: In function ‘std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > PretraziIndeksPojmova(std::string, const Pojmovi&)’:
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:83:30: error: could not convert ‘(& _phrases)->std::map<_Key, _Tp, _Compare, _Alloc>::at<std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >, std::less<std::basic_string<char> >, std::allocator<std::pair<const std::basic_string<char>, std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > > > >((*(const key_type*)(& _word)))’ from ‘const mapped_type {aka const std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >}’ to ‘std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >’
+      return _phrases.at(_word); /// [] - not working for const map (due to the ability to edit map)
+                              ^
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp: In function ‘void IspisiIndeksPojmova(const Pojmovi&)’:
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:91:39: error: ‘const class std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >’ has no member named ‘at’
+                PrintData(_data.second.at(i), ", ");
+                                       ^
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:93:39: error: ‘const class std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >’ has no member named ‘at’
+                PrintData(_data.second.at(_data.second.size() - 1));
+                                       ^
+In file included from /usr/include/c++/4.8/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/4.8/bits/char_traits.h:39,
+                 from /usr/include/c++/4.8/ios:40,
+                 from /usr/include/c++/4.8/ostream:38,
+                 from /usr/include/c++/4.8/iostream:39,
+                 from /rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:2:
+/usr/include/c++/4.8/bits/stl_iterator.h: In instantiation of ‘std::back_insert_iterator<_Container>& std::back_insert_iterator<_Container>::operator=(const typename _Container::value_type&) [with _Container = std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >; typename _Container::value_type = std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int>]’:
+/usr/include/c++/4.8/bits/stl_algobase.h:335:18:   required from ‘static _OI std::__copy_move<false, false, std::random_access_iterator_tag>::__copy_m(_II, _II, _OI) [with _II = std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int>*; _OI = std::back_insert_iterator<std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >]’
+/usr/include/c++/4.8/bits/stl_algobase.h:390:70:   required from ‘_OI std::__copy_move_a(_II, _II, _OI) [with bool _IsMove = false; _II = std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int>*; _OI = std::back_insert_iterator<std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >]’
+/usr/include/c++/4.8/bits/stl_algobase.h:428:38:   required from ‘_OI std::__copy_move_a2(_II, _II, _OI) [with bool _IsMove = false; _II = __gnu_cxx::__normal_iterator<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int>*, std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >; _OI = std::back_insert_iterator<std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >]’
+/usr/include/c++/4.8/bits/stl_algobase.h:460:17:   required from ‘_OI std::copy(_II, _II, _OI) [with _II = __gnu_cxx::__normal_iterator<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int>*, std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >; _OI = std::back_insert_iterator<std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > >]’
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:70:107:   required from here
+/usr/include/c++/4.8/bits/stl_iterator.h:438:2: error: ‘class std::set<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> >’ has no member named ‘push_back’
+  container->push_back(__value);
+  ^
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp: In function ‘std::vector<std::tuple<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int> > PretraziIndeksPojmova(std::string, const Pojmovi&)’:
+/rhome/r/rpolic1/workspace/TP/Z3/Z2/main.cpp:84:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
